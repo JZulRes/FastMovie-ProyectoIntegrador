@@ -13,7 +13,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Ptr-94-RAV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tc8-wN-jJy">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bKY-5N-0yU">
@@ -93,6 +93,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Mqy-iR-zGN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="sY4-iQ-akB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -385,6 +386,7 @@
                         <viewControllerLayoutGuide type="bottom" id="dMR-Nu-0fi"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Gag-nJ-k7G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dh2-0a-u4G">

@@ -11,6 +11,7 @@ import UIKit
 class DetallesViewController: UIViewController {
     var id_pelicula = 0
     
+    
     @IBOutlet weak var imagenPelicula: UIImageView!
     @IBOutlet weak var sinopsistex: UITextView!
     @IBOutlet weak var generotext: UILabel!
