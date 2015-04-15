@@ -67,7 +67,7 @@ class EstrenosTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
 
         // Configure the cell...
         
@@ -124,8 +124,8 @@ class EstrenosTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
        
         if segue.identifier == "details_segue" {
-            let vistaDetalles = segue.destinationViewController as Detalles
-            vistaDetalles.id_pelicula = sender as Int
+            let vistaDetalles = segue.destinationViewController as! DetallesViewController
+            vistaDetalles.id_pelicula = sender as! Int
         }
     }
     

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeTable: UITableViewController {
+class HomeTableViewController: UITableViewController {
         var dict:NSArray = NSArray()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,7 +63,7 @@ class HomeTable: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
 
         // Configure the cell...
            cell.textLabel?.text = dict[indexPath.row]["name"] as? String
@@ -118,8 +118,8 @@ class HomeTable: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         if segue.identifier == "details_segue2" {
-            let vistaDetalles = segue.destinationViewController as Detalles
-            vistaDetalles.id_pelicula = sender as Int
+            let vistaDetalles = segue.destinationViewController as! DetallesViewController
+            vistaDetalles.id_pelicula = sender as! Int
         }
         
     

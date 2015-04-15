@@ -10,22 +10,21 @@
 		111F62711ABA1D1500464BB9 /* Nextboton.png in Resources */ = {isa = PBXBuildFile; fileRef = 111F62701ABA1D1500464BB9 /* Nextboton.png */; };
 		111F62751ABA2AB200464BB9 /* RegistroCompraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111F62741ABA2AB200464BB9 /* RegistroCompraViewController.swift */; };
 		115D7C981ABA03EB00C761CE /* botoncompra.png in Resources */ = {isa = PBXBuildFile; fileRef = 115D7C971ABA03EB00C761CE /* botoncompra.png */; };
-		115DF06B1ABBB32A00429CFD /* SideBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115DF06A1ABBB32A00429CFD /* SideBarTableViewController.swift */; };
-		1163EC4B1ABC749100E9A1A1 /* SideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1163EC4A1ABC749100E9A1A1 /* SideBar.swift */; };
+		1183E3951ADF168F00C889C8 /* UserIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1183E3941ADF168F00C889C8 /* UserIcon.png */; };
+		1183E3991ADF1C4C00C889C8 /* CrearUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183E3981ADF1C4C00C889C8 /* CrearUsuarioViewController.swift */; };
 		11D7A5BD1AB75EDB006A6088 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D7A5BC1AB75EDB006A6088 /* AppDelegate.swift */; };
-		11D7A5BF1AB75EDB006A6088 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D7A5BE1AB75EDB006A6088 /* ViewController.swift */; };
 		11D7A5C21AB75EDB006A6088 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11D7A5C01AB75EDB006A6088 /* Main.storyboard */; };
 		11D7A5C41AB75EDB006A6088 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11D7A5C31AB75EDB006A6088 /* Images.xcassets */; };
 		11D7A5C71AB75EDB006A6088 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11D7A5C51AB75EDB006A6088 /* LaunchScreen.xib */; };
 		11D7A5D31AB75EDB006A6088 /* FastMovieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D7A5D21AB75EDB006A6088 /* FastMovieTests.swift */; };
 		11F2B8681AB760B000AE3BD4 /* EstrenosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F2B8671AB760B000AE3BD4 /* EstrenosTableViewController.swift */; };
-		11F2B86A1AB76A0300AE3BD4 /* Detalles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F2B8691AB76A0300AE3BD4 /* Detalles.swift */; };
+		11F2B86A1AB76A0300AE3BD4 /* DetallesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F2B8691AB76A0300AE3BD4 /* DetallesViewController.swift */; };
 		11F2B86D1AB76F2C00AE3BD4 /* estrella.png in Resources */ = {isa = PBXBuildFile; fileRef = 11F2B86B1AB76F2C00AE3BD4 /* estrella.png */; };
 		11F2B86E1AB76F2C00AE3BD4 /* Estrellarellena.png in Resources */ = {isa = PBXBuildFile; fileRef = 11F2B86C1AB76F2C00AE3BD4 /* Estrellarellena.png */; };
 		11F2B8781AB78B9800AE3BD4 /* Search24.png in Resources */ = {isa = PBXBuildFile; fileRef = 11F2B8771AB78B9800AE3BD4 /* Search24.png */; };
 		11F2B87D1AB78C7D00AE3BD4 /* Home-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 11F2B87A1AB78C7D00AE3BD4 /* Home-24.png */; };
 		11F2B87E1AB78C7D00AE3BD4 /* Star-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 11F2B87B1AB78C7D00AE3BD4 /* Star-24.png */; };
-		11F2B8801AB796BF00AE3BD4 /* HomeTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F2B87F1AB796BF00AE3BD4 /* HomeTable.swift */; };
+		11F2B8801AB796BF00AE3BD4 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F2B87F1AB796BF00AE3BD4 /* HomeTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,12 +41,11 @@
 		111F62701ABA1D1500464BB9 /* Nextboton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Nextboton.png; sourceTree = "<group>"; };
 		111F62741ABA2AB200464BB9 /* RegistroCompraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistroCompraViewController.swift; sourceTree = "<group>"; };
 		115D7C971ABA03EB00C761CE /* botoncompra.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botoncompra.png; sourceTree = "<group>"; };
-		115DF06A1ABBB32A00429CFD /* SideBarTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SideBarTableViewController.swift; path = ../SideBarTableViewController.swift; sourceTree = "<group>"; };
-		1163EC4A1ABC749100E9A1A1 /* SideBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SideBar.swift; path = ../SideBar.swift; sourceTree = "<group>"; };
+		1183E3941ADF168F00C889C8 /* UserIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UserIcon.png; sourceTree = "<group>"; };
+		1183E3981ADF1C4C00C889C8 /* CrearUsuarioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CrearUsuarioViewController.swift; path = ../CrearUsuarioViewController.swift; sourceTree = "<group>"; };
 		11D7A5B71AB75EDA006A6088 /* FastMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FastMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11D7A5BB1AB75EDB006A6088 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11D7A5BC1AB75EDB006A6088 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		11D7A5BE1AB75EDB006A6088 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		11D7A5C11AB75EDB006A6088 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		11D7A5C31AB75EDB006A6088 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		11D7A5C61AB75EDB006A6088 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -55,13 +53,13 @@
 		11D7A5D11AB75EDB006A6088 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11D7A5D21AB75EDB006A6088 /* FastMovieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastMovieTests.swift; sourceTree = "<group>"; };
 		11F2B8671AB760B000AE3BD4 /* EstrenosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EstrenosTableViewController.swift; sourceTree = "<group>"; };
-		11F2B8691AB76A0300AE3BD4 /* Detalles.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Detalles.swift; sourceTree = "<group>"; };
+		11F2B8691AB76A0300AE3BD4 /* DetallesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetallesViewController.swift; sourceTree = "<group>"; };
 		11F2B86B1AB76F2C00AE3BD4 /* estrella.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = estrella.png; sourceTree = "<group>"; };
 		11F2B86C1AB76F2C00AE3BD4 /* Estrellarellena.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Estrellarellena.png; sourceTree = "<group>"; };
 		11F2B8771AB78B9800AE3BD4 /* Search24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Search24.png; sourceTree = "<group>"; };
 		11F2B87A1AB78C7D00AE3BD4 /* Home-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Home-24.png"; sourceTree = "<group>"; };
 		11F2B87B1AB78C7D00AE3BD4 /* Star-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Star-24.png"; sourceTree = "<group>"; };
-		11F2B87F1AB796BF00AE3BD4 /* HomeTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeTable.swift; path = ../HomeTable.swift; sourceTree = "<group>"; };
+		11F2B87F1AB796BF00AE3BD4 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeTableViewController.swift; path = ../HomeTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,17 +80,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		11D7A5AE1AB75EDA006A6088 = {
+		1183E39A1ADF224600C889C8 /* Icons */ = {
 			isa = PBXGroup;
 			children = (
-				11F2B8771AB78B9800AE3BD4 /* Search24.png */,
 				111F62701ABA1D1500464BB9 /* Nextboton.png */,
+				1183E3941ADF168F00C889C8 /* UserIcon.png */,
+				11F2B8771AB78B9800AE3BD4 /* Search24.png */,
 				11F2B86B1AB76F2C00AE3BD4 /* estrella.png */,
 				11F2B87A1AB78C7D00AE3BD4 /* Home-24.png */,
 				11F2B87B1AB78C7D00AE3BD4 /* Star-24.png */,
 				115D7C971ABA03EB00C761CE /* botoncompra.png */,
 				11F2B86C1AB76F2C00AE3BD4 /* Estrellarellena.png */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
+		1183E39C1ADF238C00C889C8 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1183E3981ADF1C4C00C889C8 /* CrearUsuarioViewController.swift */,
+				11F2B8691AB76A0300AE3BD4 /* DetallesViewController.swift */,
+				111F62741ABA2AB200464BB9 /* RegistroCompraViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1183E39D1ADF249200C889C8 /* TableViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				11F2B87F1AB796BF00AE3BD4 /* HomeTableViewController.swift */,
+				11F2B8671AB760B000AE3BD4 /* EstrenosTableViewController.swift */,
+			);
+			name = TableViewControllers;
+			sourceTree = "<group>";
+		};
+		11D7A5AE1AB75EDA006A6088 = {
+			isa = PBXGroup;
+			children = (
 				11D7A5B91AB75EDA006A6088 /* FastMovie */,
+				1183E39A1ADF224600C889C8 /* Icons */,
 				11D7A5CF1AB75EDB006A6088 /* FastMovieTests */,
 				11D7A5B81AB75EDA006A6088 /* Products */,
 			);
@@ -111,17 +137,12 @@
 			isa = PBXGroup;
 			children = (
 				11D7A5BC1AB75EDB006A6088 /* AppDelegate.swift */,
-				11D7A5BE1AB75EDB006A6088 /* ViewController.swift */,
 				11D7A5DC1AB76036006A6088 /* Storyboard */,
 				11D7A5C31AB75EDB006A6088 /* Images.xcassets */,
 				11D7A5C51AB75EDB006A6088 /* LaunchScreen.xib */,
 				11D7A5BA1AB75EDB006A6088 /* Supporting Files */,
-				11F2B8671AB760B000AE3BD4 /* EstrenosTableViewController.swift */,
-				11F2B8691AB76A0300AE3BD4 /* Detalles.swift */,
-				1163EC4A1ABC749100E9A1A1 /* SideBar.swift */,
-				111F62741ABA2AB200464BB9 /* RegistroCompraViewController.swift */,
-				11F2B87F1AB796BF00AE3BD4 /* HomeTable.swift */,
-				115DF06A1ABBB32A00429CFD /* SideBarTableViewController.swift */,
+				1183E39C1ADF238C00C889C8 /* ViewControllers */,
+				1183E39D1ADF249200C889C8 /* TableViewControllers */,
 			);
 			path = FastMovie;
 			sourceTree = "<group>";
@@ -246,6 +267,7 @@
 				11F2B87D1AB78C7D00AE3BD4 /* Home-24.png in Resources */,
 				111F62711ABA1D1500464BB9 /* Nextboton.png in Resources */,
 				11D7A5C41AB75EDB006A6088 /* Images.xcassets in Resources */,
+				1183E3951ADF168F00C889C8 /* UserIcon.png in Resources */,
 				11F2B86D1AB76F2C00AE3BD4 /* estrella.png in Resources */,
 				115D7C981ABA03EB00C761CE /* botoncompra.png in Resources */,
 				11F2B87E1AB78C7D00AE3BD4 /* Star-24.png in Resources */,
@@ -266,14 +288,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				115DF06B1ABBB32A00429CFD /* SideBarTableViewController.swift in Sources */,
-				11F2B8801AB796BF00AE3BD4 /* HomeTable.swift in Sources */,
-				1163EC4B1ABC749100E9A1A1 /* SideBar.swift in Sources */,
-				11D7A5BF1AB75EDB006A6088 /* ViewController.swift in Sources */,
+				11F2B8801AB796BF00AE3BD4 /* HomeTableViewController.swift in Sources */,
 				11D7A5BD1AB75EDB006A6088 /* AppDelegate.swift in Sources */,
 				111F62751ABA2AB200464BB9 /* RegistroCompraViewController.swift in Sources */,
 				11F2B8681AB760B000AE3BD4 /* EstrenosTableViewController.swift in Sources */,
-				11F2B86A1AB76A0300AE3BD4 /* Detalles.swift in Sources */,
+				1183E3991ADF1C4C00C889C8 /* CrearUsuarioViewController.swift in Sources */,
+				11F2B86A1AB76A0300AE3BD4 /* DetallesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
