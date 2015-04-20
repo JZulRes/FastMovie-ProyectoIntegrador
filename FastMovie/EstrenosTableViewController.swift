@@ -12,7 +12,8 @@ class EstrenosTableViewController: UITableViewController {
     var dict:NSArray = NSArray()
     
     override func viewDidLoad() {
-        var url : String = "http://localhost:3000/movies.json"
+       // var url : String = "http://localhost:3000/movies.json"
+        var url : String = "https://murmuring-oasis-5413.herokuapp.com/movies.json"
         var request : NSMutableURLRequest = NSMutableURLRequest()
         request.URL = NSURL(string: url)
         request.HTTPMethod = "GET"

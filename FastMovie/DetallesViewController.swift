@@ -26,7 +26,8 @@ class DetallesViewController: UIViewController {
     @IBOutlet weak var botonnext: UIButton!
     
     override func viewWillAppear(animated: Bool) {
-        var url : String = "http://localhost:3000/movies/\(id_pelicula).json"
+        //var url : String = "http://localhost:3000/movies/\(id_pelicula).json"
+        var url : String = "https://murmuring-oasis-5413.herokuapp.com/movies/\(id_pelicula).json"
         var request : NSMutableURLRequest = NSMutableURLRequest()
         request.URL = NSURL(string: url)
         request.HTTPMethod = "GET"
@@ -70,8 +71,10 @@ class DetallesViewController: UIViewController {
             
         })
         //utilizamos la otra tabla para los balores que faltan utilizando la tabla funciones
+        println("numero acontinuacion es el id")
         println(id_pelicula)
-        var url2 : String = "http://localhost:3000/funtions/\(id_pelicula).json"
+      //  var url2 : String = "http://localhost:3000/funtions/\(id_pelicula).json"
+        var url2 : String = "https://murmuring-oasis-5413.herokuapp.com/funtions/\(id_pelicula).json"
         var request2 : NSMutableURLRequest = NSMutableURLRequest()
         request2.URL = NSURL(string: url2)
         request2.HTTPMethod = "GET"
@@ -83,8 +86,21 @@ class DetallesViewController: UIViewController {
             
             if (jsonResult1 != nil) {
                 dispatch_async(dispatch_get_main_queue(), {
-                    println(jsonResult1["hora"] as! String)
-                    self.horariotext.text = jsonResult1["Hora"] as? String
+                    let format = NSDateFormatter()
+                    let format2 = NSDateFormatter()
+                    
+                    format2.dateFromString("yyyy-MM-dd'T'HH:mm:ssZZ")
+                    
+                    let dats:String = jsonResult1["hora"] as! String
+                    
+                    let date = format2.dateFromString(dats)
+                    
+                    format.dateStyle = NSDateFormatterStyle.MediumStyle
+                    format.timeStyle = NSDateFormatterStyle.ShortStyle
+                    
+                    println(date)
+                    
+                    self.horariotext.text = dats
                 })
             } else {
                 println("no se encontro .json")
@@ -97,12 +113,7 @@ class DetallesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        sinopsistex.text="Continúan las hazañas de la imparable franquicia de Rápidos y Furiosos. Vin Diesel, Paul Walker y Dwayne Johnson lideran el casting de actores de Rápidos Y Furiosos 7. James Wan dirige el nuevo capítulo de esta exitosa serie que incluye también a Michelle Rodriguez, Jordana Brewster, Tyrese Gibson, Chris “Ludracris” Bridges, Elsa Pataky y Lucas Black. Ello son acompañados por nuevas estrellas de acción internacionales que se unen a la franquicia como Jason Statham, Djimon Hounsou, Tony Jaa, Ronda Rousey, Nathalie Emmanuel y Kurt Russell. Además Neal H. Moritz, Vin Diesel y Michael Fottrel regresan para producir esta nueva entrega escrita por Chris Morgan."
-        
-//        cinesdisponibles.text="Cine Colombia los molinos \n Royal Films Premium plaza"
-//        horariotext.text="12pm-2pm"
-//        clasificaciontext.text = "Para mayores de 16"
-//        generotext.text = "Accion"
+
         
           }
     
