@@ -63,7 +63,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qx5-fT-Tnd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-645" y="356.99999999999994"/>
+            <point key="canvasLocation" x="-710.25" y="636.5"/>
         </scene>
         <!--Estrenos-->
         <scene sceneID="bkX-ee-kgB">
@@ -82,7 +82,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rnr-Fl-6e5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="167" y="671"/>
+            <point key="canvasLocation" x="185.25" y="637.5"/>
         </scene>
         <!--Usuario-->
         <scene sceneID="uBi-c6-ZRW">
@@ -93,31 +93,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <connections>
-                        <segue destination="4cq-KC-ycJ" kind="relationship" relationship="rootViewController" id="bg6-nE-JPa"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LH5-kc-egi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="166.5" y="1393"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="qJf-bE-uW2">
-            <objects>
-                <viewController id="4cq-KC-ycJ" sceneMemberID="viewController">
-                    <button key="view" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AgO-1k-GMq">
-                        <rect key="frame" x="-23" y="-15" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <state key="normal" title="Button">
-                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                        </state>
-                    </button>
-                    <navigationItem key="navigationItem" id="zpW-MR-szE"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ah5-vt-MaL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1181.25" y="1426.5"/>
         </scene>
         <!--Title-->
         <scene sceneID="TRg-LU-NNF">
@@ -177,7 +156,7 @@
                                 </variation>
                                 <connections>
                                     <action selector="entrar:" destination="ChP-zh-s2H" eventType="touchUpInside" id="4m0-V0-nce"/>
-                                    <segue destination="WJA-7v-2Aw" kind="show" identifier="mostrarcompra" id="ETJ-DW-rlt"/>
+                                    <segue destination="WJA-7v-2Aw" kind="presentation" identifier="mostrarcompra" id="ETJ-DW-rlt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKP-nI-Pez">
@@ -278,13 +257,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Estrenos" id="2sf-Ph-7IA"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <segue destination="8Ov-gP-MMP" kind="show" identifier="details_segue" id="XRF-8W-rxd"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Vg-v1-dar" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="891" y="664"/>
+            <point key="canvasLocation" x="901.5" y="638"/>
         </scene>
         <!--Detalles-->
         <scene sceneID="79w-pw-dY0">
@@ -398,13 +378,14 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="kDR-3n-2rK" kind="show" id="whx-k2-VvU"/>
+                                    <segue destination="kDR-3n-2rK" kind="show" identifier="pasaespecificacion" id="whx-k2-VvU"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Detalles" id="Sc1-bw-WGC"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="ImagenPelicula" destination="zOf-ix-RS9" id="zGi-Gy-OtQ"/>
                         <outlet property="botonnext" destination="rbM-x5-oyZ" id="akx-MD-dQr"/>
@@ -423,7 +404,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OLN-Q9-MGm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1642.5" y="671"/>
+            <point key="canvasLocation" x="1661.25" y="727.5"/>
         </scene>
         <!--Especificación-->
         <scene sceneID="LTr-1j-gX5">
@@ -555,7 +536,7 @@
                                     <rect key="frame" x="154" y="530" width="66" height="65"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="PLV-mS-SqZ" kind="show" id="ZYv-D4-OiB"/>
+                                    <segue destination="PLV-mS-SqZ" kind="show" identifier="pasopuesto" id="ZYv-D4-OiB"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;Nombre de pelicula&quot;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEJ-o8-UZZ">
@@ -1248,20 +1229,6 @@
                                     <rect key="frame" x="136" y="458" width="102" height="30"/>
                                 </variation>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XgD-Qx-hWY">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="0.001257677643" green="0.072166727299999997" blue="0.90741398360000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Cancelar">
-                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="136" y="523" width="102" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="cancelarBoton:" destination="WJA-7v-2Aw" eventType="touchUpInside" id="dkw-RK-ajx"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valido Hasta" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="taX-T8-028">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1313,6 +1280,20 @@
                                     <rect key="frame" x="198" y="328" width="161" height="21"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XgD-Qx-hWY">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.001257677643" green="0.072166727299999997" blue="0.90741398360000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Cancelar">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="136" y="523" width="102" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="4ZL-zv-zX4" kind="show" id="gqR-Y4-lOh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -1324,13 +1305,13 @@
                                 <exclude reference="Uot-c6-0w8"/>
                                 <exclude reference="0g5-6W-Un1"/>
                                 <exclude reference="dBg-Tx-2Ni"/>
-                                <exclude reference="XgD-Qx-hWY"/>
                                 <exclude reference="taX-T8-028"/>
                                 <exclude reference="Buz-Jh-fAn"/>
                                 <exclude reference="CfG-YC-vvW"/>
                                 <exclude reference="lzj-gH-I8s"/>
                                 <exclude reference="6FC-tv-EE9"/>
                                 <exclude reference="h15-k6-da9"/>
+                                <exclude reference="XgD-Qx-hWY"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -1342,13 +1323,13 @@
                                 <include reference="Uot-c6-0w8"/>
                                 <include reference="0g5-6W-Un1"/>
                                 <include reference="dBg-Tx-2Ni"/>
-                                <include reference="XgD-Qx-hWY"/>
                                 <include reference="taX-T8-028"/>
                                 <include reference="Buz-Jh-fAn"/>
                                 <include reference="CfG-YC-vvW"/>
                                 <include reference="lzj-gH-I8s"/>
                                 <include reference="6FC-tv-EE9"/>
                                 <include reference="h15-k6-da9"/>
+                                <include reference="XgD-Qx-hWY"/>
                             </mask>
                         </variation>
                     </view>
@@ -1588,6 +1569,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Home" id="9rW-tE-EWp"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <segue destination="8Ov-gP-MMP" kind="show" identifier="details_segue2" id="SeX-gr-ZrH"/>
                     </connections>
@@ -1630,6 +1612,6 @@
         <image name="silla.png" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="XRF-8W-rxd"/>
+        <segue reference="SeX-gr-ZrH"/>
     </inferredMetricsTieBreakers>
 </document>

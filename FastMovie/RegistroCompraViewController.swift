@@ -9,6 +9,8 @@
 import UIKit
 
 class RegistroCompraViewController: UIViewController {
+    
+    var id_pelicula = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
