@@ -19,8 +19,12 @@ class tarjetaViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        seguelogin()
        
+    }
+    
+    func seguelogin(){
+        self.performSegueWithIdentifier("login", sender: nil)
     }
 
     override func didReceiveMemoryWarning() {

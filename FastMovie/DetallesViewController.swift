@@ -128,16 +128,17 @@ class DetallesViewController: UIViewController {
     
     
     // MARK: - Navigation
-    
+    /*
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "mostrarcompra" {
             let id = segue.destinationViewController as! tarjetaViewController
-            id.id_pelicula = sender as! Int
+            id_pelicula = sender as! Int
         }
+
     }
     
-    
+*/    
     
     func calificar(cal: Int) {
         switch cal {

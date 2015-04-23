@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		1101CAC61AE05CEF008C98AA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1101CAC51AE05CEF008C98AA /* LoginViewController.swift */; };
+		1115A52D1AE99D53004C5EA1 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 1115A52C1AE99D53004C5EA1 /* user.png */; };
+		1115A52F1AE9B2B6004C5EA1 /* UsuarioTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1115A52E1AE9B2B6004C5EA1 /* UsuarioTableViewController.swift */; };
 		111F62711ABA1D1500464BB9 /* Nextboton.png in Resources */ = {isa = PBXBuildFile; fileRef = 111F62701ABA1D1500464BB9 /* Nextboton.png */; };
 		111F62751ABA2AB200464BB9 /* RegistroCompraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111F62741ABA2AB200464BB9 /* RegistroCompraViewController.swift */; };
 		115D7C981ABA03EB00C761CE /* botoncompra.png in Resources */ = {isa = PBXBuildFile; fileRef = 115D7C971ABA03EB00C761CE /* botoncompra.png */; };
 		1183E3951ADF168F00C889C8 /* UserIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1183E3941ADF168F00C889C8 /* UserIcon.png */; };
 		1183E3991ADF1C4C00C889C8 /* CrearUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183E3981ADF1C4C00C889C8 /* CrearUsuarioViewController.swift */; };
-		118566161AE047470064FF35 /* UsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118566151AE047470064FF35 /* UsuarioViewController.swift */; };
 		11860C8D1AE8A3B100CAC949 /* tarjetaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11860C8C1AE8A3B100CAC949 /* tarjetaViewController.swift */; };
 		11D5FDF71AE5B0F50000ABEE /* silla.png in Resources */ = {isa = PBXBuildFile; fileRef = 11D5FDF51AE5B0F50000ABEE /* silla.png */; };
 		11D5FDF81AE5B0F50000ABEE /* sillaocupada.png in Resources */ = {isa = PBXBuildFile; fileRef = 11D5FDF61AE5B0F50000ABEE /* sillaocupada.png */; };
@@ -47,12 +48,13 @@
 
 /* Begin PBXFileReference section */
 		1101CAC51AE05CEF008C98AA /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
+		1115A52C1AE99D53004C5EA1 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
+		1115A52E1AE9B2B6004C5EA1 /* UsuarioTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UsuarioTableViewController.swift; path = ../UsuarioTableViewController.swift; sourceTree = "<group>"; };
 		111F62701ABA1D1500464BB9 /* Nextboton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Nextboton.png; sourceTree = "<group>"; };
 		111F62741ABA2AB200464BB9 /* RegistroCompraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistroCompraViewController.swift; sourceTree = "<group>"; };
 		115D7C971ABA03EB00C761CE /* botoncompra.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = botoncompra.png; sourceTree = "<group>"; };
 		1183E3941ADF168F00C889C8 /* UserIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UserIcon.png; sourceTree = "<group>"; };
 		1183E3981ADF1C4C00C889C8 /* CrearUsuarioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CrearUsuarioViewController.swift; path = ../CrearUsuarioViewController.swift; sourceTree = "<group>"; };
-		118566151AE047470064FF35 /* UsuarioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UsuarioViewController.swift; path = ../UsuarioViewController.swift; sourceTree = "<group>"; };
 		11860C8C1AE8A3B100CAC949 /* tarjetaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = tarjetaViewController.swift; path = ../tarjetaViewController.swift; sourceTree = "<group>"; };
 		11D5FDF51AE5B0F50000ABEE /* silla.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = silla.png; sourceTree = "<group>"; };
 		11D5FDF61AE5B0F50000ABEE /* sillaocupada.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sillaocupada.png; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				1183E3941ADF168F00C889C8 /* UserIcon.png */,
 				11D5FDF51AE5B0F50000ABEE /* silla.png */,
 				11D5FDFD1AE5C1260000ABEE /* VisaLogo.png */,
+				1115A52C1AE99D53004C5EA1 /* user.png */,
 				11D5FDFB1AE5C1110000ABEE /* MasterCard.png */,
 				11D5FDF61AE5B0F50000ABEE /* sillaocupada.png */,
 				11F2B8771AB78B9800AE3BD4 /* Search24.png */,
@@ -120,7 +123,6 @@
 			children = (
 				1183E3981ADF1C4C00C889C8 /* CrearUsuarioViewController.swift */,
 				11D5FDF91AE5B5320000ABEE /* CompraViewController.swift */,
-				118566151AE047470064FF35 /* UsuarioViewController.swift */,
 				11860C8C1AE8A3B100CAC949 /* tarjetaViewController.swift */,
 				1101CAC51AE05CEF008C98AA /* LoginViewController.swift */,
 				11F2B8691AB76A0300AE3BD4 /* DetallesViewController.swift */,
@@ -133,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				11F2B87F1AB796BF00AE3BD4 /* HomeTableViewController.swift */,
+				1115A52E1AE9B2B6004C5EA1 /* UsuarioTableViewController.swift */,
 				11F2B8671AB760B000AE3BD4 /* EstrenosTableViewController.swift */,
 			);
 			name = TableViewControllers;
@@ -294,6 +297,7 @@
 				11F2B87D1AB78C7D00AE3BD4 /* Home-24.png in Resources */,
 				111F62711ABA1D1500464BB9 /* Nextboton.png in Resources */,
 				11D7A5C41AB75EDB006A6088 /* Images.xcassets in Resources */,
+				1115A52D1AE99D53004C5EA1 /* user.png in Resources */,
 				1183E3951ADF168F00C889C8 /* UserIcon.png in Resources */,
 				11F2B86D1AB76F2C00AE3BD4 /* estrella.png in Resources */,
 				115D7C981ABA03EB00C761CE /* botoncompra.png in Resources */,
@@ -316,11 +320,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				118566161AE047470064FF35 /* UsuarioViewController.swift in Sources */,
 				11F2B8801AB796BF00AE3BD4 /* HomeTableViewController.swift in Sources */,
 				11D7A5BD1AB75EDB006A6088 /* AppDelegate.swift in Sources */,
 				111F62751ABA2AB200464BB9 /* RegistroCompraViewController.swift in Sources */,
 				11860C8D1AE8A3B100CAC949 /* tarjetaViewController.swift in Sources */,
+				1115A52F1AE9B2B6004C5EA1 /* UsuarioTableViewController.swift in Sources */,
 				1101CAC61AE05CEF008C98AA /* LoginViewController.swift in Sources */,
 				11F2B8681AB760B000AE3BD4 /* EstrenosTableViewController.swift in Sources */,
 				11D5FDFA1AE5B5320000ABEE /* CompraViewController.swift in Sources */,

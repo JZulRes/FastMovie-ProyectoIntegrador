@@ -56,23 +56,30 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         NSURLConnection.sendSynchronousRequest(request, returningResponse: &response, error: &error)
         
         if (error != nil) {
+            
             self.MensajedeAlerta("Email o Contraseña incorrecto")
+            
         }
-        
+       
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     func MensajedeAlerta(mensaje:String){
         var miAlerta = UIAlertController(title: "Alerta", message: mensaje, preferredStyle: UIAlertControllerStyle.Alert)
         
+        
         let okAction = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default, handler: nil)
         miAlerta.addAction(okAction)
         self.presentViewController(miAlerta, animated: true, completion: nil)
+        
         
     }
     
     func textFieldDidEndEditing(textField: UITextField){
         textField.resignFirstResponder()
     }
+    
+    
     
     
     /*
