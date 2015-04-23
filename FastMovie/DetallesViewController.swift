@@ -26,7 +26,7 @@ class DetallesViewController: UIViewController {
     @IBOutlet weak var botonnext: UIButton!
     
     override func viewWillAppear(animated: Bool) {
-        //var url : String = "http://localhost:3000/movies/\(id_pelicula).json"
+        
         var url : String = "https://murmuring-oasis-5413.herokuapp.com/movies/\(id_pelicula).json"
         var request : NSMutableURLRequest = NSMutableURLRequest()
         request.URL = NSURL(string: url)
@@ -49,17 +49,17 @@ class DetallesViewController: UIViewController {
                     var url2: String = jsonResult["image"] as! String
                     
                     func requestImageWithStringURL(url2: String) {
-                         if let url = NSURL(string: url2) {
-                           println(url2)
+                        if let url = NSURL(string: url2) {
+                            println(url2)
                             if let data = NSData(contentsOfURL: url){
                                 self.imagenPelicula.contentMode = UIViewContentMode.ScaleAspectFit
-                               self.imagenPelicula.image = UIImage(data: data)
+                                self.imagenPelicula.image = UIImage(data: data)
                             }
                         }
                         
                     }
                     
-                   
+                    
                     requestImageWithStringURL(url2)
                     
                 })
@@ -73,7 +73,6 @@ class DetallesViewController: UIViewController {
         //utilizamos la otra tabla para los balores que faltan utilizando la tabla funciones
         println("numero acontinuacion es el id")
         println(id_pelicula)
-      //  var url2 : String = "http://localhost:3000/funtions/\(id_pelicula).json"
         var url2 : String = "https://murmuring-oasis-5413.herokuapp.com/funtions/\(id_pelicula).json"
         var request2 : NSMutableURLRequest = NSMutableURLRequest()
         request2.URL = NSURL(string: url2)
@@ -113,29 +112,31 @@ class DetallesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
-          }
+        
+    }
     
     func drawData(name: String) {
         self.sinopsistex.text = name;
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
+    
+    
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "mostrarcompra" {
+            let id = segue.destinationViewController as! tarjetaViewController
+            id.id_pelicula = sender as! Int
+        }
     }
-   */
+    
     
     
     func calificar(cal: Int) {
@@ -145,7 +146,7 @@ class DetallesViewController: UIViewController {
         case 2:
             e1.image = UIImage(named: "estrellarellena.png")
             e2.image = UIImage(named: "estrellarellena.png")
-
+            
         case 3:
             e1.image = UIImage(named: "estrellarellena.png")
             e2.image = UIImage(named: "estrellarellena.png")
@@ -165,5 +166,5 @@ class DetallesViewController: UIViewController {
             break;
         }
     }
-
+    
 }

@@ -8,7 +8,11 @@
 
 import UIKit
 
-class tarjetaViewController: UIViewController {
+
+
+class tarjetaViewController: UIViewController{
+    
+ 
 
     @IBOutlet weak var numerodetarjeta: UITextField!
     
@@ -23,20 +27,18 @@ class tarjetaViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func cancelarBoton(sender: UIButton) {
-        
-    segueForUnwindingToViewController(toViewController: nil, fromViewController: nil, identifier: details_segue)
-    }
-    
-
+   
     
     // MARK: - Navigation
-
+    /*
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "pasopuesto" {
+            let id = segue.destinationViewController as! RegistroCompraViewController
+            id.id_pelicula = sender as! Int
+            
+        }
     }
-    
+    */
 
 }
