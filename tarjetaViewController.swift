@@ -13,7 +13,7 @@ import UIKit
 class tarjetaViewController: UIViewController{
     
  
-
+ 
     @IBOutlet weak var numerodetarjeta: UITextField!
     
     

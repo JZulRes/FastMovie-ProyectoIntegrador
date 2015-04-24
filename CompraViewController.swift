@@ -14,7 +14,7 @@ class CompraViewController: UIViewController {
         super.viewDidLoad()
         var botonnext: [[UIButton]]
        
-        
+         
     }
 
     override func didReceiveMemoryWarning() {

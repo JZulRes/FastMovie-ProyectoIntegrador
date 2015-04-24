@@ -22,7 +22,7 @@ class HomeTableViewController: UITableViewController {
             var error: AutoreleasingUnsafeMutablePointer<NSError?> = nil
             
             let jsonResult: NSArray! = NSJSONSerialization.JSONObjectWithData(data, options:NSJSONReadingOptions.MutableContainers, error: error) as? NSArray
-            
+             
             if (jsonResult != nil) {
                 dispatch_async(dispatch_get_main_queue(), {
                     self.dict = jsonResult

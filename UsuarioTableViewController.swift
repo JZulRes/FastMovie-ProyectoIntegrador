@@ -33,7 +33,7 @@ class UsuarioTableViewController: UITableViewController {
         self.tableView.estimatedRowHeight = 44.0
          seguelogin()
     }
-    
+     
     override func viewDidAppear(animated: Bool) {
         self.tableView.reloadData()
     }

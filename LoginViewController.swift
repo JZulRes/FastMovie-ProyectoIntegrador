@@ -65,7 +65,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        if (urlData != nil) {
+        if (urlData != nil) { 
 
            let res = response as! NSHTTPURLResponse!;
             NSLog("Response code: %ld", res.statusCode);
