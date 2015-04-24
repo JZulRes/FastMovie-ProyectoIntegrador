@@ -14,40 +14,30 @@ class UsuarioTableViewController: UITableViewController {
     var textuser: NSMutableArray! = NSMutableArray()
     
     override func viewDidLoad() {
+       
         super.viewDidLoad()
-        seguelogin()
+        if NSUserDefaults.standardUserDefaults().objectForKey("user_id") != nil{
+            self.textuser.addObject(NSUserDefaults.standardUserDefaults().objectForKey("user_id")!)}
         
-        self.textuser.addObject("Email")
-        self.textuser.addObject("Nombre de Usuario")
+        if NSUserDefaults.standardUserDefaults().objectForKey("user_username") != nil{
+            self.textuser.addObject(NSUserDefaults.standardUserDefaults().objectForKey("user_username")!)}
+        
+        if NSUserDefaults.standardUserDefaults().objectForKey("user_email") != nil{
+        self.textuser.addObject(NSUserDefaults.standardUserDefaults().objectForKey("user_email")!)}
+    
+        if NSUserDefaults.standardUserDefaults().objectForKey("user_name") != nil {
+            self.textuser.addObject(NSUserDefaults.standardUserDefaults().objectForKey("user_name")!)}
+        
+
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 44.0
-        
-        
-        var url : String = "https://murmuring-oasis-5413.herokuapp.com/users.json"
-        var request : NSMutableURLRequest = NSMutableURLRequest()
-        request.URL = NSURL(string: url)
-        request.HTTPMethod = "GET"
-        
-        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue(), completionHandler:{ (response:NSURLResponse!, data: NSData!, error: NSError!) -> Void in
-            var error: AutoreleasingUnsafeMutablePointer<NSError?> = nil
-            
-            let jsonResult: NSArray! = NSJSONSerialization.JSONObjectWithData(data, options:NSJSONReadingOptions.MutableContainers, error: error) as? NSArray
-            
-            if (jsonResult != nil) {
-                dispatch_async(dispatch_get_main_queue(), {
-                    self.dict = jsonResult
-                    
-                    self.tableView.reloadData()
-                })
-            } else {
-                // si no carga el Json
-                println("error")
-            }
-            
-            
-        })
-       
+         seguelogin()
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        self.tableView.reloadData()
+    }
+    
     func seguelogin(){
         self.performSegueWithIdentifier("pasologin", sender: nil)
     }
@@ -80,7 +70,20 @@ class UsuarioTableViewController: UITableViewController {
         //return cell
         var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as! UITableViewCell
         
-        cell.textLabel?.text = self.textuser.objectAtIndex(indexPath.row) as? String
+        //cell.textLabel?.text = self.textuser.objectAtIndex(indexPath.row) as? String
+        
+        if (indexPath.row == 0) {
+            cell.textLabel?.text == "ID"
+        } else if indexPath.row == 1 {
+            cell.textLabel?.text == "Username"
+        } else if indexPath.row == 2 {
+            cell.textLabel?.text == "Email"
+        } else if indexPath.row == 3 {
+            cell.textLabel?.text == "Nombre"
+        }
+        
+        
+        cell.detailTextLabel?.text = self.textuser.objectAtIndex(indexPath.row) as? String
         
         return cell
     }

@@ -35,7 +35,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         //conexion a la base de datos
         var correo = emailtextbox.text
         var contraseña = contraseñatextbox.text
-        var id = ""
+    
         
         
         let  json = "{\"user\":{\"email\":\"\(correo)\",\"password\":\"\(contraseña)\"}}"
@@ -53,10 +53,22 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         var urlData:NSData? = NSURLConnection.sendSynchronousRequest(request, returningResponse: &response, error: &error)
         
+        if(response == nil){
+            println("es nil el response")
+            //mostrar alerta
+            var alertView:UIAlertView = UIAlertView()
+            alertView.title = "Login Fallido"
+            alertView.message = "Email o contraseña incorrectos" as String
+            alertView.delegate = self
+            alertView.addButtonWithTitle("OK")
+            alertView.show()
+            return
+        }
+        
         if (urlData != nil) {
 
            let res = response as! NSHTTPURLResponse!;
-            //NSLog("Response code: %ld", res.statusCode);
+            NSLog("Response code: %ld", res.statusCode);
             if (res.statusCode >= 200 && res.statusCode < 300)
             {
                 var responseData:NSString  = NSString(data:urlData!, encoding:NSUTF8StringEncoding)!
@@ -67,17 +79,26 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 
                 let jsonData:NSDictionary! = NSJSONSerialization.JSONObjectWithData(urlData!, options:NSJSONReadingOptions.MutableContainers , error: &error) as? NSDictionary
                 
-                if(jsonData != nil){
-                    dispatch_async(dispatch_get_main_queue(), {
-                        id = jsonData["id"] as! String
-                    
-                    })
-                }
                 
                 let success:NSInteger = jsonData.valueForKey("success") as! NSInteger
                 
-               
                 
+                if let data = jsonData as? Dictionary<String, AnyObject>{
+                    
+                    if let dict = jsonData["user"] as? Dictionary<String, AnyObject> {
+                        let a: AnyObject? = dict["id"]
+                        NSUserDefaults.standardUserDefaults().setObject("\(a)", forKey: "user_id")
+                        
+                        NSUserDefaults.standardUserDefaults().setObject(dict["name"] as? String, forKey: "user_name")
+                        NSUserDefaults.standardUserDefaults().setObject(dict["username"] as! String, forKey: "user_username")
+                        NSUserDefaults.standardUserDefaults().setObject(dict["email"] as! String, forKey: "user_email")
+                        
+                        NSUserDefaults.standardUserDefaults().synchronize()
+                    }
+                    
+                }
+               
+               
                 //[jsonData[@"success"] integerValue];
                 
                 NSLog("Success: %ld", success);
@@ -104,7 +125,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     
                 }
                 
-                println(id)
+               // println(id)
             }
         
         }
