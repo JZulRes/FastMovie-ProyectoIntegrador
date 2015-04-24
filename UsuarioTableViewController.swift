@@ -10,15 +10,43 @@ import UIKit
 
 class UsuarioTableViewController: UITableViewController {
 
+    var dict:NSArray = NSArray()
+    var textuser: NSMutableArray! = NSMutableArray()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         seguelogin()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        self.textuser.addObject("Email")
+        self.textuser.addObject("Nombre de Usuario")
+        self.tableView.rowHeight = UITableViewAutomaticDimension
+        self.tableView.estimatedRowHeight = 44.0
+        
+        
+        var url : String = "https://murmuring-oasis-5413.herokuapp.com/users.json"
+        var request : NSMutableURLRequest = NSMutableURLRequest()
+        request.URL = NSURL(string: url)
+        request.HTTPMethod = "GET"
+        
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue(), completionHandler:{ (response:NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+            var error: AutoreleasingUnsafeMutablePointer<NSError?> = nil
+            
+            let jsonResult: NSArray! = NSJSONSerialization.JSONObjectWithData(data, options:NSJSONReadingOptions.MutableContainers, error: error) as? NSArray
+            
+            if (jsonResult != nil) {
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.dict = jsonResult
+                    
+                    self.tableView.reloadData()
+                })
+            } else {
+                // si no carga el Json
+                println("error")
+            }
+            
+            
+        })
+       
     }
     func seguelogin(){
         self.performSegueWithIdentifier("pasologin", sender: nil)
@@ -34,24 +62,29 @@ class UsuarioTableViewController: UITableViewController {
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return 0
+        return self.textuser.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as! UITableViewCell
+        //let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
 
         // Configure the cell...
-
+        //cell.textLabel?.text = dict[indexPath.row]["email"] as? String
+        //return cell
+        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as! UITableViewCell
+        
+        cell.textLabel?.text = self.textuser.objectAtIndex(indexPath.row) as? String
+        
         return cell
     }
-    */
+
 
     /*
     // Override to support conditional editing of the table view.

@@ -64,7 +64,7 @@ class CrearUsuarioViewController: UIViewController, UITextFieldDelegate, UIAlert
         if(conterror == 0){
             //conexion en la base de datos
             println("entro al if json " + String(conterror));
-            
+        
             
             let  json = "{\"user\":{\"name\":\"\(nombre)\",\"email\":\"\(correo)\",\"password\":\"\(contraseña)\",\"username\":\"\(username)\"}}"
             
