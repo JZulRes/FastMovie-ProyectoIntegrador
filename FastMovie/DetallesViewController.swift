@@ -76,7 +76,7 @@ class DetallesViewController: UIViewController {
         var url2 : String = "https://murmuring-oasis-5413.herokuapp.com/funtions/\(id_pelicula).json"
         var request2 : NSMutableURLRequest = NSMutableURLRequest()
         request2.URL = NSURL(string: url2)
-        request2.HTTPMethod = "GET"
+        request2.HTTPMethod = "GET" 
         
         NSURLConnection.sendAsynchronousRequest(request2, queue: NSOperationQueue(), completionHandler:{ (response1:NSURLResponse!, data: NSData!, error: NSError!) -> Void in
             var error1: AutoreleasingUnsafeMutablePointer<NSError?> = nil

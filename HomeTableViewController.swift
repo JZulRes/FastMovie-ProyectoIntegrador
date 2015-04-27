@@ -9,6 +9,8 @@
 import UIKit
 
 class HomeTableViewController: UITableViewController {
+    
+   
     var dict:NSArray = NSArray()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,15 +63,34 @@ class HomeTableViewController: UITableViewController {
         return dict.count
     }
     
-    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
         
+        var url1: String = "https://murmuring-oasis-5413.herokuapp.com/movies.json"
+        var request : NSMutableURLRequest = NSMutableURLRequest()
+        request.URL = NSURL(string: url1)
+        
+        
         // Configure the cell...
         cell.textLabel?.text = dict[indexPath.row]["name"] as? String
+       
+        /*
+         let imagenurl = NSURL(fileURLWithPath: (dict[indexPath.row]["image"] as? String)!)
+            println("mis datos son \(imagenurl)")
+            cell.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
+            cell.imageView?.image = dict[indexPath.row]["image"] as! UIImage
+        */
+            
+        
         return cell
     }
     
+    @IBAction func BotonFavoritos(sender: AnyObject) {
+        //recibir el nombre de la pelicula y su id
+        //var nombre = dict[indexPath.row]["name"] as? String
+        
+        
+    }
     
     /*
     // Override to support conditional editing of the table view.

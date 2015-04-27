@@ -63,28 +63,20 @@ class UsuarioTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        //let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
-
-        // Configure the cell...
-        //cell.textLabel?.text = dict[indexPath.row]["email"] as? String
-        //return cell
-        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
         
-        //cell.textLabel?.text = self.textuser.objectAtIndex(indexPath.row) as? String
-        
-        if (indexPath.row == 0) {
-            cell.textLabel?.text == "ID"
-        } else if indexPath.row == 1 {
-            cell.textLabel?.text == "Username"
-        } else if indexPath.row == 2 {
-            cell.textLabel?.text == "Email"
-        } else if indexPath.row == 3 {
-            cell.textLabel?.text == "Nombre"
+        if(indexPath.row == 0){
+            cell.textLabel?.text = "Nombre de Usuario"
+            cell.detailTextLabel?.text = self.textuser.objectAtIndex(indexPath.row + 1) as? String
+        }else if (indexPath.row == 1){
+            cell.textLabel?.text = "Correo"
+            cell.detailTextLabel?.text = self.textuser.objectAtIndex(indexPath.row + 1) as? String
+        }else if (indexPath.row >= 2){
+            cell.textLabel?.text = "Peliculas Favoritas"
+            cell.detailTextLabel?.text = ""
+            //aqui se colocan las pelicuals fovoritas de los usuairios
         }
-        
-        
-        cell.detailTextLabel?.text = self.textuser.objectAtIndex(indexPath.row) as? String
-        
+      
         return cell
     }
 
@@ -133,5 +125,6 @@ class UsuarioTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
 
 }

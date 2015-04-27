@@ -43,20 +43,18 @@ class EstrenosTableViewController: UITableViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+      
     }
     
     // MARK: - Table view data source
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
+       
         return 1
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
+        
         return dict.count
     }
     
@@ -65,8 +63,6 @@ class EstrenosTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
         
         // Configure the cell...
-        
-        //cell.textLabel?.text = "Hola"
         
         cell.textLabel?.text = dict[indexPath.row]["name"] as? String
         
@@ -114,7 +110,7 @@ class EstrenosTableViewController: UITableViewController {
     }
     
     // MARK: - Navigation
-    
+     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
@@ -122,6 +118,7 @@ class EstrenosTableViewController: UITableViewController {
             let vistaDetalles = segue.destinationViewController as! DetallesViewController
             vistaDetalles.id_pelicula = sender as! Int
         }
+        
     }
     
     
