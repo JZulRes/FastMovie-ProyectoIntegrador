@@ -1,47 +1,32 @@
 //
-//  UsuarioTableViewController.swift
+//  FavoritosTableViewController.swift
 //  FastMovie
 //
-//  Created by JuanFer on 23/04/15.
+//  Created by JuanFer on 3/05/15.
 //  Copyright (c) 2015 JuanFer. All rights reserved.
 //
 
 import UIKit
 
-class UsuarioTableViewController: UITableViewController {
+class FavoritosTableViewController: UITableViewController {
 
     var dict:NSArray = NSArray()
-    var textuser: NSMutableArray! = NSMutableArray()
+    var textuser:NSMutableArray! = NSMutableArray()
     
     override func viewDidLoad() {
-       seguelogin()
+        segueloginfavorito()
         super.viewDidLoad()
-        if NSUserDefaults.standardUserDefaults().objectForKey("user_id") != nil{
-            self.textuser.addObject(NSUserDefaults.standardUserDefaults().objectForKey("user_id")!)}
-        
         if NSUserDefaults.standardUserDefaults().objectForKey("user_username") != nil{
             self.textuser.addObject(NSUserDefaults.standardUserDefaults().objectForKey("user_username")!)}
         
-        if NSUserDefaults.standardUserDefaults().objectForKey("user_email") != nil{
-        self.textuser.addObject(NSUserDefaults.standardUserDefaults().objectForKey("user_email")!)}
-    
-        if NSUserDefaults.standardUserDefaults().objectForKey("user_name") != nil {
-            self.textuser.addObject(NSUserDefaults.standardUserDefaults().objectForKey("user_name")!)}
-        
-
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 44.0
-        
-    }
-     
+          }
+
     override func viewDidAppear(animated: Bool) {
         self.tableView.reloadData()
     }
     
-    func seguelogin(){
-        self.performSegueWithIdentifier("pasologin", sender: nil)
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -60,22 +45,26 @@ class UsuarioTableViewController: UITableViewController {
         // Return the number of rows in the section.
         return self.textuser.count
     }
+    func segueloginfavorito(){
+        self.performSegueWithIdentifier("favoritelogin", sender: nil)
+    }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
-        
+        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
+
         if(indexPath.row == 0){
             cell.textLabel?.text = "Nombre de Usuario"
-            cell.detailTextLabel?.text = self.textuser.objectAtIndex(indexPath.row + 1) as? String
+            cell.detailTextLabel?.text = self.textuser.objectAtIndex(indexPath.row) as? String
         }else if (indexPath.row == 1){
-            cell.textLabel?.text = "Correo"
-            cell.detailTextLabel?.text = self.textuser.objectAtIndex(indexPath.row + 1) as? String
+            cell.textLabel?.text = "Peliculas Favoritas"
+            
         }
-        
+
+
         return cell
     }
-
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -113,14 +102,14 @@ class UsuarioTableViewController: UITableViewController {
     */
 
     /*
-    // MARK: - Navigation
-
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+            if segue.identifier == "favoritelogin"{
+                let login = segue.destinationViewController as! LoginFavoritosViewController
+        }
+        
     }
     */
-    
+
 
 }

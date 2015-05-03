@@ -1,41 +1,37 @@
 //
-//  LoginViewController.swift
+//  LoginFavoritosViewController.swift
 //  FastMovie
 //
-//  Created by JuanFer on 16/04/15.
+//  Created by JuanFer on 3/05/15.
 //  Copyright (c) 2015 JuanFer. All rights reserved.
 //
 
 import UIKit
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
-    
+class LoginFavoritosViewController: UIViewController {
+
     @IBOutlet weak var emailtextbox: UITextField!
     @IBOutlet weak var contraseñatextbox: UITextField!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-    }
-    
+
+          }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    @IBAction func entrar(sender: AnyObject)  {
         
+    }
+   
+    
+    @IBAction func entrar(sender: AnyObject) {
         if(emailtextbox.text.isEmpty || contraseñatextbox.text.isEmpty){
             MensajedeAlerta("Todos los campos son requeridos");
             return
         }
-        
-        //conexion a la base de datos
         var correo = emailtextbox.text
         var contraseña = contraseñatextbox.text
-    
+        
         
         
         let  json = "{\"user\":{\"email\":\"\(correo)\",\"password\":\"\(contraseña)\"}}"
@@ -65,9 +61,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        if (urlData != nil) { 
-
-           let res = response as! NSHTTPURLResponse!;
+        if (urlData != nil) {
+            
+            let res = response as! NSHTTPURLResponse!;
             NSLog("Response code: %ld", res.statusCode);
             if (res.statusCode >= 200 && res.statusCode < 300)
             {
@@ -97,8 +93,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     }
                     
                 }
-               
-               
+                
+                
                 //[jsonData[@"success"] integerValue];
                 
                 NSLog("Success: %ld", success);
@@ -125,13 +121,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     
                 }
                 
-               // println(id)
+                // println(id)
             }
-        
+            
         }
+        self.dismissViewControllerAnimated(true, completion: nil)
+        
         
     }
-        
+    
     func MensajedeAlerta(mensaje:String){
         var miAlerta = UIAlertController(title: "Alerta", message: mensaje, preferredStyle: UIAlertControllerStyle.Alert)
         
@@ -148,26 +146,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     func dataOfJson(url: String) -> NSArray{
-    
+        
         var data = NSData(contentsOfURL: NSURL(string: url)!)
         return (NSJSONSerialization.JSONObjectWithData(data!, options: nil, error: nil) as! NSArray)
     }
-    
-    
-    
-    
+
+
     /*
     // MARK: - Navigation
-    
+
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    
-        if segue.identifier == "mostrarcompra" {
-            let acompra = segue.destinationViewController as! CompraViewController
-            
-        }
-
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
     }
     */
-    
+
 }

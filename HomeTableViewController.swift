@@ -70,19 +70,27 @@ class HomeTableViewController: UITableViewController {
         var request : NSMutableURLRequest = NSMutableURLRequest()
         request.URL = NSURL(string: url1)
         
+        //creacion del boton favorito
+        let button:UIButton = UIButton.buttonWithType(UIButtonType.System) as! UIButton
+        button.frame = CGRectMake(0, 0, 24, 24)
+        button.setImage(UIImage(named: "Star-24"), forState: UIControlState.Normal);
+        button.setImage(UIImage(named: "Estrellarellena"), forState: UIControlState.Highlighted)
+        button.tag = indexPath.row
+        //agregar la accion
+        button.addTarget(self, action: "favoritos:", forControlEvents: UIControlEvents.TouchUpInside)
+        cell.accessoryView = button;
+        
         
         // Configure the cell...
         cell.textLabel?.text = dict[indexPath.row]["name"] as? String
-       
-        /*
-         let imagenurl = NSURL(fileURLWithPath: (dict[indexPath.row]["image"] as? String)!)
-            println("mis datos son \(imagenurl)")
-            cell.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
-            cell.imageView?.image = dict[indexPath.row]["image"] as! UIImage
-        */
-            
         
         return cell
+    }
+    
+    func favoritos(button: UIButton) {
+        let a = dict[button.tag]["id"]
+        
+        println("Se undio: \(a)")
     }
     
     @IBAction func BotonFavoritos(sender: AnyObject) {
