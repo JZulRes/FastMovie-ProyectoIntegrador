@@ -14,27 +14,39 @@ class UsuarioTableViewController: UITableViewController {
     var textuser: NSMutableArray! = NSMutableArray()
     
     override func viewDidLoad() {
-       seguelogin()
-        super.viewDidLoad()
-        if NSUserDefaults.standardUserDefaults().objectForKey("user_id") != nil{
-            self.textuser.addObject(NSUserDefaults.standardUserDefaults().objectForKey("user_id")!)}
+             super.viewDidLoad()
+        self.tableView.reloadData()
+        seguelogin()
         
-        if NSUserDefaults.standardUserDefaults().objectForKey("user_username") != nil{
-            self.textuser.addObject(NSUserDefaults.standardUserDefaults().objectForKey("user_username")!)}
-        
-        if NSUserDefaults.standardUserDefaults().objectForKey("user_email") != nil{
-        self.textuser.addObject(NSUserDefaults.standardUserDefaults().objectForKey("user_email")!)}
-    
-        if NSUserDefaults.standardUserDefaults().objectForKey("user_name") != nil {
-            self.textuser.addObject(NSUserDefaults.standardUserDefaults().objectForKey("user_name")!)}
+//        if NSUserDefaults.standardUserDefaults().objectForKey("user_id") != nil{
+//            self.textuser.addObject(NSUserDefaults.standardUserDefaults().objectForKey("user_id")!)}
+//        
+//        if NSUserDefaults.standardUserDefaults().objectForKey("user_username") != nil{
+//            self.textuser.addObject(NSUserDefaults.standardUserDefaults().objectForKey("user_username")!)}
+//        
+//        if NSUserDefaults.standardUserDefaults().objectForKey("user_email") != nil{
+//        self.textuser.addObject(NSUserDefaults.standardUserDefaults().objectForKey("user_email")!)}
+//    
+//        if NSUserDefaults.standardUserDefaults().objectForKey("user_name") != nil {
+//            self.textuser.addObject(NSUserDefaults.standardUserDefaults().objectForKey("user_name")!)}
         
 
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 44.0
+       
         
     }
      
     override func viewDidAppear(animated: Bool) {
+        self.textuser.removeAllObjects()
+        //self.textuser.addObject(NSUserDefaults.standardUserDefaults().objectForKey("user_id")!)
+    
+        self.textuser.addObject(NSUserDefaults.standardUserDefaults().objectForKey("user_username")!)
+    
+        self.textuser.addObject(NSUserDefaults.standardUserDefaults().objectForKey("user_email")!)
+        
+    
+       // self.textuser.addObject(NSUserDefaults.standardUserDefaults().objectForKey("user_name")!)
         self.tableView.reloadData()
     }
     
@@ -67,10 +79,10 @@ class UsuarioTableViewController: UITableViewController {
         
         if(indexPath.row == 0){
             cell.textLabel?.text = "Nombre de Usuario"
-            cell.detailTextLabel?.text = self.textuser.objectAtIndex(indexPath.row + 1) as? String
+            cell.detailTextLabel?.text = self.textuser.objectAtIndex(indexPath.row ) as? String
         }else if (indexPath.row == 1){
             cell.textLabel?.text = "Correo"
-            cell.detailTextLabel?.text = self.textuser.objectAtIndex(indexPath.row + 1) as? String
+            cell.detailTextLabel?.text = self.textuser.objectAtIndex(indexPath.row) as? String
         }
         
         return cell
