@@ -24,7 +24,9 @@ class tarjetaViewController: UIViewController{
     }
     
     func seguelogin(){
+        if(NSUserDefaults.standardUserDefaults().objectForKey("user_email") == nil){
         self.performSegueWithIdentifier("login", sender: nil)
+        }
     }
 
     override func didReceiveMemoryWarning() {

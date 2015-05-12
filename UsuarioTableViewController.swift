@@ -17,20 +17,6 @@ class UsuarioTableViewController: UITableViewController {
              super.viewDidLoad()
         self.tableView.reloadData()
         seguelogin()
-        
-//        if NSUserDefaults.standardUserDefaults().objectForKey("user_id") != nil{
-//            self.textuser.addObject(NSUserDefaults.standardUserDefaults().objectForKey("user_id")!)}
-//        
-//        if NSUserDefaults.standardUserDefaults().objectForKey("user_username") != nil{
-//            self.textuser.addObject(NSUserDefaults.standardUserDefaults().objectForKey("user_username")!)}
-//        
-//        if NSUserDefaults.standardUserDefaults().objectForKey("user_email") != nil{
-//        self.textuser.addObject(NSUserDefaults.standardUserDefaults().objectForKey("user_email")!)}
-//    
-//        if NSUserDefaults.standardUserDefaults().objectForKey("user_name") != nil {
-//            self.textuser.addObject(NSUserDefaults.standardUserDefaults().objectForKey("user_name")!)}
-        
-
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 44.0
        
@@ -39,19 +25,22 @@ class UsuarioTableViewController: UITableViewController {
      
     override func viewDidAppear(animated: Bool) {
         self.textuser.removeAllObjects()
-        //self.textuser.addObject(NSUserDefaults.standardUserDefaults().objectForKey("user_id")!)
-    
         self.textuser.addObject(NSUserDefaults.standardUserDefaults().objectForKey("user_username")!)
-    
         self.textuser.addObject(NSUserDefaults.standardUserDefaults().objectForKey("user_email")!)
-        
-    
-       // self.textuser.addObject(NSUserDefaults.standardUserDefaults().objectForKey("user_name")!)
         self.tableView.reloadData()
     }
     
     func seguelogin(){
+        if(NSUserDefaults.standardUserDefaults().objectForKey("user_email") == nil){
         self.performSegueWithIdentifier("pasologin", sender: nil)
+        }
+    }
+    @IBAction func logaut(sender: AnyObject) {
+     NSUserDefaults.standardUserDefaults().removeObjectForKey("user_email")
+     NSUserDefaults.standardUserDefaults().removeObjectForKey("user_username")
+     NSUserDefaults.standardUserDefaults().removeObjectForKey("user_name")
+     NSUserDefaults.standardUserDefaults().removeObjectForKey("user_id")
+     seguelogin()
     }
 
     override func didReceiveMemoryWarning() {
@@ -84,6 +73,7 @@ class UsuarioTableViewController: UITableViewController {
             cell.textLabel?.text = "Correo"
             cell.detailTextLabel?.text = self.textuser.objectAtIndex(indexPath.row) as? String
         }
+        
         
         return cell
     }

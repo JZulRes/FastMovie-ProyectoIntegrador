@@ -16,6 +16,7 @@
 		1183E3951ADF168F00C889C8 /* UserIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 1183E3941ADF168F00C889C8 /* UserIcon.png */; };
 		1183E3991ADF1C4C00C889C8 /* CrearUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183E3981ADF1C4C00C889C8 /* CrearUsuarioViewController.swift */; };
 		11860C8D1AE8A3B100CAC949 /* tarjetaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11860C8C1AE8A3B100CAC949 /* tarjetaViewController.swift */; };
+		11AAF12A1B02B25000393282 /* logout.png in Resources */ = {isa = PBXBuildFile; fileRef = 11AAF1291B02B25000393282 /* logout.png */; };
 		11ACAF011AF6827900CED55A /* FavoritosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11ACAF001AF6827900CED55A /* FavoritosTableViewController.swift */; };
 		11ACAF051AF687F400CED55A /* LoginFavoritosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11ACAF041AF687F400CED55A /* LoginFavoritosViewController.swift */; };
 		11D5FDF71AE5B0F50000ABEE /* silla.png in Resources */ = {isa = PBXBuildFile; fileRef = 11D5FDF51AE5B0F50000ABEE /* silla.png */; };
@@ -58,6 +59,7 @@
 		1183E3941ADF168F00C889C8 /* UserIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = UserIcon.png; sourceTree = "<group>"; };
 		1183E3981ADF1C4C00C889C8 /* CrearUsuarioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CrearUsuarioViewController.swift; path = ../CrearUsuarioViewController.swift; sourceTree = "<group>"; };
 		11860C8C1AE8A3B100CAC949 /* tarjetaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = tarjetaViewController.swift; path = ../tarjetaViewController.swift; sourceTree = "<group>"; };
+		11AAF1291B02B25000393282 /* logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout.png; sourceTree = "<group>"; };
 		11ACAF001AF6827900CED55A /* FavoritosTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FavoritosTableViewController.swift; path = ../FavoritosTableViewController.swift; sourceTree = "<group>"; };
 		11ACAF041AF687F400CED55A /* LoginFavoritosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginFavoritosViewController.swift; path = ../LoginFavoritosViewController.swift; sourceTree = "<group>"; };
 		11D5FDF51AE5B0F50000ABEE /* silla.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = silla.png; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				1183E3941ADF168F00C889C8 /* UserIcon.png */,
 				11D5FDF51AE5B0F50000ABEE /* silla.png */,
 				11D5FDFD1AE5C1260000ABEE /* VisaLogo.png */,
+				11AAF1291B02B25000393282 /* logout.png */,
 				1115A52C1AE99D53004C5EA1 /* user.png */,
 				11D5FDFB1AE5C1110000ABEE /* MasterCard.png */,
 				11D5FDF61AE5B0F50000ABEE /* sillaocupada.png */,
@@ -300,6 +303,7 @@
 				11F2B86E1AB76F2C00AE3BD4 /* Estrellarellena.png in Resources */,
 				11D7A5C71AB75EDB006A6088 /* LaunchScreen.xib in Resources */,
 				11E1D1831AE0700400A8CC3E /* Main.storyboard in Resources */,
+				11AAF12A1B02B25000393282 /* logout.png in Resources */,
 				11F2B87D1AB78C7D00AE3BD4 /* Home-24.png in Resources */,
 				111F62711ABA1D1500464BB9 /* Nextboton.png in Resources */,
 				11D7A5C41AB75EDB006A6088 /* Images.xcassets in Resources */,

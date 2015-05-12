@@ -14,8 +14,9 @@ class FavoritosTableViewController: UITableViewController {
     var textuser:NSMutableArray! = NSMutableArray()
     
     override func viewDidLoad() {
-        segueloginfavorito()
+        
         super.viewDidLoad()
+        segueloginfavorito()
         if NSUserDefaults.standardUserDefaults().objectForKey("user_username") != nil{
             self.textuser.addObject(NSUserDefaults.standardUserDefaults().objectForKey("user_username")!)}
         
@@ -26,6 +27,14 @@ class FavoritosTableViewController: UITableViewController {
     override func viewDidAppear(animated: Bool) {
         self.tableView.reloadData()
     }
+    @IBAction func logaut(sender: AnyObject) {
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("user_email")
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("user_username")
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("user_name")
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("user_id")
+        segueloginfavorito()
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -46,20 +55,24 @@ class FavoritosTableViewController: UITableViewController {
         return self.textuser.count
     }
     func segueloginfavorito(){
+     if(NSUserDefaults.standardUserDefaults().objectForKey("user_email") == nil){
         self.performSegueWithIdentifier("favoritelogin", sender: nil)
+        }
     }
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
 
         if(indexPath.row == 0){
             cell.textLabel?.text = "Nombre de Usuario"
-            cell.detailTextLabel?.text = self.textuser.objectAtIndex(indexPath.row) as? String
+            cell.detailTextLabel?.text = self.textuser.objectAtIndex(indexPath.row ) as? String
         }else if (indexPath.row == 1){
-            cell.textLabel?.text = "Peliculas Favoritas"
-            
+            cell.textLabel?.text = "Peliculas Favortias"
+            cell.detailTextLabel?.text = "base de datos"
         }
+        
+        
 
 
         return cell
