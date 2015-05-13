@@ -246,7 +246,7 @@
                     <navigationItem key="navigationItem" title="Favoritos" id="COk-1k-kni">
                         <barButtonItem key="rightBarButtonItem" image="logout.png" id="fhq-1P-ZYP">
                             <connections>
-                                <action selector="logaut:" destination="KP3-iu-abJ" id="XRc-Vb-Efg"/>
+                                <action selector="SignOut:" destination="KP3-iu-abJ" id="Uyx-iD-vTN"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -320,7 +320,7 @@
                     <navigationItem key="navigationItem" title="Bienvenido" id="Etf-g3-DIL">
                         <barButtonItem key="rightBarButtonItem" image="logout.png" id="gJF-4V-t4G">
                             <connections>
-                                <action selector="logaut:" destination="pO1-vH-RVF" id="SL1-sX-ozr"/>
+                                <action selector="signOut:" destination="pO1-vH-RVF" id="Nac-AY-PQC"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

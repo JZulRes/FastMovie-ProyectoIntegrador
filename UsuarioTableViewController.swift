@@ -35,12 +35,13 @@ class UsuarioTableViewController: UITableViewController {
         self.performSegueWithIdentifier("pasologin", sender: nil)
         }
     }
-    @IBAction func logaut(sender: AnyObject) {
-     NSUserDefaults.standardUserDefaults().removeObjectForKey("user_email")
-     NSUserDefaults.standardUserDefaults().removeObjectForKey("user_username")
-     NSUserDefaults.standardUserDefaults().removeObjectForKey("user_name")
-     NSUserDefaults.standardUserDefaults().removeObjectForKey("user_id")
-     seguelogin()
+    
+    @IBAction func signOut(sender: AnyObject) {
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("user_email")
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("user_username")
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("user_name")
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("user_id")
+        seguelogin()
     }
 
     override func didReceiveMemoryWarning() {

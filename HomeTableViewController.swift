@@ -9,8 +9,8 @@
 import UIKit
 
 class HomeTableViewController: UITableViewController {
+
     
-   
     var dict:NSArray = NSArray()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,17 +86,50 @@ class HomeTableViewController: UITableViewController {
         
         return cell
     }
-    
-    func favoritos(button: UIButton) {
-        let a = dict[button.tag]["id"]
+    func Dbfavoritos(idpelicula:AnyObject?){
         
-        println("Se undio: \(a)")
+        let iduser = NSUserDefaults.standardUserDefaults().objectForKey("user_id") as! String
+        println("el user id necesario: \(iduser)")
+        let  json = "{\"favorite\":{\"movie_id\":\"\(idpelicula)\",\"user_id\":\"\(iduser)\"}}"
+        
+        println(json.dataUsingEncoding(NSUTF8StringEncoding))
+        
+        let URL: NSURL = NSURL(string: "https://murmuring-oasis-5413.herokuapp.com/login")!
+        let request:NSMutableURLRequest = NSMutableURLRequest(URL:URL)
+        request.HTTPMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        request.HTTPBody = json.dataUsingEncoding(NSUTF8StringEncoding);
+        var error:NSError?;
+        var response:NSURLResponse?;
+        
+        var urlData:NSData? = NSURLConnection.sendSynchronousRequest(request, returningResponse: &response, error: &error)
     }
     
-    @IBAction func BotonFavoritos(sender: AnyObject) {
-        //recibir el nombre de la pelicula y su id
-        //var nombre = dict[indexPath.row]["name"] as? String
-        
+    func favoritos(button: UIButton) {
+        if(NSUserDefaults.standardUserDefaults().objectForKey("user_email") == nil){
+            //mensaje de alerta indicandole al usuario que es neceario login
+            var alertView:UIAlertView = UIAlertView()
+            alertView.title = "Login"
+            alertView.message = "Es necesario iniciar sesion" as String
+            alertView.delegate = self
+            alertView.addButtonWithTitle("OK")
+            alertView.show()
+            return
+        }else{
+            let idpelicula = dict[button.tag]["id"]
+            println("Se undio: \(idpelicula)")
+            //hacer la conexion en la base de datos
+            Dbfavoritos(idpelicula)
+            
+            var alertView:UIAlertView = UIAlertView()
+            alertView.title = "Mensaje"
+            alertView.message = "Pelicula agregada a favoritos" as String
+            alertView.delegate = self
+            alertView.addButtonWithTitle("OK")
+            alertView.show()
+            
+        }
         
     }
     
