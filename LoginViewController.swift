@@ -25,7 +25,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func entrar(sender: AnyObject)  {
+    @IBAction func entrar(sender: AnyObject) {
         
         if(emailtextbox.text.isEmpty || contraseñatextbox.text.isEmpty){
             MensajedeAlerta("Todos los campos son requeridos");
@@ -86,13 +86,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 if let data = jsonData as? Dictionary<String, AnyObject>{
                     
                     if let dict = jsonData["user"] as? Dictionary<String, AnyObject> {
-                        let a: AnyObject? = dict["id"]
-                        NSUserDefaults.standardUserDefaults().setObject("\(a)", forKey: "user_id")
                         
+                        let a = dict["id"]
+                        NSUserDefaults.standardUserDefaults().setValue(a, forKey: "user_id")
                         NSUserDefaults.standardUserDefaults().setObject(dict["name"] as? String, forKey: "user_name")
                         NSUserDefaults.standardUserDefaults().setObject(dict["username"] as! String, forKey: "user_username")
                         NSUserDefaults.standardUserDefaults().setObject(dict["email"] as! String, forKey: "user_email")
-                        
                         NSUserDefaults.standardUserDefaults().synchronize()
                     }
                     

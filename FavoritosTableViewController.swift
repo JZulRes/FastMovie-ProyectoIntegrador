@@ -12,6 +12,12 @@ class FavoritosTableViewController: UITableViewController {
     
     var dict:NSArray = NSArray()
     var textuser:NSMutableArray! = NSMutableArray()
+    var saveidpelicula: NSArray = NSArray()
+    var numerodepelicula: Int = 0
+    var favorites: NSDictionary?
+    var idpeliculafavo: AnyObject?
+    //let iduser: Int = NSUserDefaults.standardUserDefaults().objectForKey("user_id") as! Int
+    let iduser: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +31,59 @@ class FavoritosTableViewController: UITableViewController {
         self.textuser.removeAllObjects()
         self.textuser.addObject(NSUserDefaults.standardUserDefaults().objectForKey("user_username")!)
         self.textuser.addObject("Peliculas Favoritas")
+        BaseDeDatosFavoritos()
         self.tableView.reloadData()
+    }
+    func BaseDeDatosFavoritos(){
+        if(NSUserDefaults.standardUserDefaults().objectForKey("user_email") != nil){
+            println("aceptada")
+            let iduser: Int = NSUserDefaults.standardUserDefaults().objectForKey("user_id") as! Int
+        
+        //una conexion a la base de datos "favoritos" para preguntar por el id pelicula.
+        var url : String = "https://murmuring-oasis-5413.herokuapp.com/favorites/\(iduser).json"
+       
+        println("id usuario: \(iduser)")
+        var request : NSMutableURLRequest = NSMutableURLRequest()
+        request.URL = NSURL(string: url)
+        request.HTTPMethod = "GET"
+        
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue(), completionHandler:{ (response:NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+            var error: NSError?
+
+            let jsonResult: NSDictionary! = NSJSONSerialization.JSONObjectWithData(data, options:NSJSONReadingOptions.MutableContainers, error: &error) as? NSDictionary
+
+            //let success:NSInteger = jsonResult.valueForKey("success") as! NSInteger
+            
+            if let datos = jsonResult as? Dictionary<String, AnyObject>{
+                
+                let arr:NSArray = jsonResult["favorites"] as! NSArray
+                
+                for iterardict in arr {
+                    let inner = iterardict as! Dictionary<String, AnyObject>
+                    
+                        let id = inner["movie_id"]
+                        println("EL id de la pelicula: \(id)")
+                    
+                }
+                
+//                if let dict = jsonResult["favorites"] as? Dictionary<String, AnyObject>{
+//                    for iterardict in dict{
+//                        let id = iterardict["movie_id"]
+//                        println("EL id de la pelicula: \(id)")
+//                        let b = dict["movie_id"]
+//                       println(b)
+//                    }
+//                }
+//                
+            }
+        })
+        
+        println("el id de la pelicula es: \(saveidpelicula)")
+        
+        
+        //otra conexion para preguntar a la tabla "Peliculas con el id pelicula obtenido por el nombre y colocarlo en el textuser
+            
+        }
     }
     
     @IBAction func SignOut(sender: AnyObject) {
@@ -72,9 +130,6 @@ class FavoritosTableViewController: UITableViewController {
             cell.textLabel?.text = self.textuser.objectAtIndex(indexPath.row) as? String
             cell.detailTextLabel?.text = "base de datos"
         }
-        
-        
-        
         
         return cell
     }

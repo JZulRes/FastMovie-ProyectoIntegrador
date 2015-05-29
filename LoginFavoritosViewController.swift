@@ -82,9 +82,9 @@ class LoginFavoritosViewController: UIViewController {
                 if let data = jsonData as? Dictionary<String, AnyObject>{
                     
                     if let dict = jsonData["user"] as? Dictionary<String, AnyObject> {
-                        let a: AnyObject? = dict["id"]
-                        NSUserDefaults.standardUserDefaults().setObject("\(a)", forKey: "user_id")
+                        let a = dict["id"]
                         
+                        NSUserDefaults.standardUserDefaults().setValue(a, forKey: "user_id")
                         NSUserDefaults.standardUserDefaults().setObject(dict["name"] as? String, forKey: "user_name")
                         NSUserDefaults.standardUserDefaults().setObject(dict["username"] as! String, forKey: "user_username")
                         NSUserDefaults.standardUserDefaults().setObject(dict["email"] as! String, forKey: "user_email")

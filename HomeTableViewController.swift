@@ -9,9 +9,11 @@
 import UIKit
 
 class HomeTableViewController: UITableViewController {
-
     
+    
+
     var dict:NSArray = NSArray()
+    var movieImage:UIImage!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,6 +30,7 @@ class HomeTableViewController: UITableViewController {
             if (jsonResult != nil) {
                 dispatch_async(dispatch_get_main_queue(), {
                     self.dict = jsonResult
+                    println(jsonResult)
                     
                     self.tableView.reloadData()
                 })
@@ -79,31 +82,49 @@ class HomeTableViewController: UITableViewController {
         //agregar la accion
         button.addTarget(self, action: "favoritos:", forControlEvents: UIControlEvents.TouchUpInside)
         cell.accessoryView = button;
+        //imagen de las peliculas
         
-        
+        var DireccionImagen = dict[indexPath.row]["image"] as! String
+        cell.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
+        cell.imageView?.image = requestImageWithStringURL(DireccionImagen)
         // Configure the cell...
         cell.textLabel?.text = dict[indexPath.row]["name"] as? String
+        //cell.imageView?.image = //conexion base de datos para traer la imagen
+        
+        
         
         return cell
     }
-    func Dbfavoritos(idpelicula:AnyObject?){
-        
-        let iduser = NSUserDefaults.standardUserDefaults().objectForKey("user_id") as! String
+    func  requestImageWithStringURL(url2: String)  -> UIImage?{
+        if let url = NSURL(string: url2) {
+            if let data = NSData(contentsOfURL: url){
+                 return UIImage(data: data)!
+            }
+        }
+        return nil
+    }
+
+    func Dbfavoritos(idpelicula:Int){
+
+        let iduser = NSUserDefaults.standardUserDefaults().objectForKey("user_id") as! Int
         println("el user id necesario: \(iduser)")
+        println("el id pelicula necesario \(idpelicula)")
+        println("Entramos en la conexion")
+        
         let  json = "{\"favorite\":{\"movie_id\":\"\(idpelicula)\",\"user_id\":\"\(iduser)\"}}"
-        
-        println(json.dataUsingEncoding(NSUTF8StringEncoding))
-        
-        let URL: NSURL = NSURL(string: "https://murmuring-oasis-5413.herokuapp.com/login")!
+
+       
+        let URL: NSURL = NSURL(string: "https://murmuring-oasis-5413.herokuapp.com/favorites.json")!
         let request:NSMutableURLRequest = NSMutableURLRequest(URL:URL)
         request.HTTPMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         request.HTTPBody = json.dataUsingEncoding(NSUTF8StringEncoding);
-        var error:NSError?;
-        var response:NSURLResponse?;
-        
-        var urlData:NSData? = NSURLConnection.sendSynchronousRequest(request, returningResponse: &response, error: &error)
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue())
+            {
+                (response, data, error) in
+                println(response)
+        }
     }
     
     func favoritos(button: UIButton) {
@@ -117,21 +138,15 @@ class HomeTableViewController: UITableViewController {
             alertView.show()
             return
         }else{
-            let idpelicula = dict[button.tag]["id"]
+            let idpelicula = dict[button.tag]["id"] as! Int
             println("Se undio: \(idpelicula)")
             //hacer la conexion en la base de datos
             Dbfavoritos(idpelicula)
-            
-            var alertView:UIAlertView = UIAlertView()
-            alertView.title = "Mensaje"
-            alertView.message = "Pelicula agregada a favoritos" as String
-            alertView.delegate = self
-            alertView.addButtonWithTitle("OK")
-            alertView.show()
-            
         }
         
     }
+    
+   
     
     /*
     // Override to support conditional editing of the table view.
@@ -172,6 +187,7 @@ class HomeTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         self.performSegueWithIdentifier("details_segue2", sender: dict[indexPath.row]["id"])
+        
     }
     
     // MARK: - Navigation
