@@ -30,7 +30,7 @@ class HomeTableViewController: UITableViewController {
             if (jsonResult != nil) {
                 dispatch_async(dispatch_get_main_queue(), {
                     self.dict = jsonResult
-                    println(jsonResult)
+                    //println(jsonResult)
                     
                     self.tableView.reloadData()
                 })
@@ -74,24 +74,27 @@ class HomeTableViewController: UITableViewController {
         request.URL = NSURL(string: url1)
         
         //creacion del boton favorito
+        
         let button:UIButton = UIButton.buttonWithType(UIButtonType.System) as! UIButton
         button.frame = CGRectMake(0, 0, 24, 24)
         button.setImage(UIImage(named: "Star-24"), forState: UIControlState.Normal);
         button.setImage(UIImage(named: "Estrellarellena"), forState: UIControlState.Highlighted)
         button.tag = indexPath.row
+        
         //agregar la accion
+        
         button.addTarget(self, action: "favoritos:", forControlEvents: UIControlEvents.TouchUpInside)
         cell.accessoryView = button;
+        
         //imagen de las peliculas
         
         var DireccionImagen = dict[indexPath.row]["image"] as! String
         cell.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
         cell.imageView?.image = requestImageWithStringURL(DireccionImagen)
+        
         // Configure the cell...
+        
         cell.textLabel?.text = dict[indexPath.row]["name"] as? String
-        //cell.imageView?.image = //conexion base de datos para traer la imagen
-        
-        
         
         return cell
     }
@@ -123,7 +126,7 @@ class HomeTableViewController: UITableViewController {
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue())
             {
                 (response, data, error) in
-                println(response)
+                //println(response)
         }
     }
     
