@@ -12,9 +12,12 @@ class FavoritosTableViewController: UITableViewController {
     
     var dict:NSArray = NSArray()
     var textuser:NSMutableArray! = NSMutableArray()
+    let nombrePelis:NSMutableArray = NSMutableArray()
+    let imagenesPelis:NSMutableArray = NSMutableArray()
     var id: Int = 0
     var imagenpeli:String = ""
     var nombrepeli:String = ""
+    var arrayname = [""]
     
     //let iduser: Int = NSUserDefaults.standardUserDefaults().objectForKey("user_id") as! Int
     let iduser: Int = 0
@@ -25,9 +28,14 @@ class FavoritosTableViewController: UITableViewController {
         segueloginfavorito()
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 44.0
+        
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewWillAppear(animated: Bool) {
+        self.nombrePelis.removeAllObjects()
+        self.imagenesPelis.removeAllObjects()
+        
+        
         self.textuser.removeAllObjects()
         self.textuser.addObject(NSUserDefaults.standardUserDefaults().objectForKey("user_username")!)
         self.textuser.addObject("Peliculas Favoritas")
@@ -64,8 +72,9 @@ class FavoritosTableViewController: UITableViewController {
                     for iterardict in arr {
                         let inner = iterardict as! Dictionary<String, AnyObject>
                         self.id = inner["movie_id"] as! Int
-                        self.BaseDeDatosIdPelicula(self.id);
                         println("EL id de la pelicula: \(self.id)")
+                        self.BaseDeDatosIdPelicula(self.id);
+                       
                     }
                 }
             })
@@ -86,12 +95,43 @@ class FavoritosTableViewController: UITableViewController {
             let jsonResult: NSDictionary! = NSJSONSerialization.JSONObjectWithData(data, options:NSJSONReadingOptions.MutableContainers, error: &error) as? NSDictionary
             println(jsonResult)
             
-            let imagen: String = (jsonResult["image"] as? String)!
-            self.imagenpeli = imagen
-            let nombre: String = (jsonResult["name"] as? String)!
-            self.nombrepeli = nombre
+        let imagen: String = (jsonResult["image"] as? String)!
+           self.imagenpeli = imagen
+           let nombre: String = (jsonResult["name"] as? String)!
+           self.nombrepeli = nombre
+            
+            self.nombrePelis.addObject(nombre)
+            self.imagenesPelis.addObject(imagen)
+            
+            self.tableView.reloadData()
+            
+            //println(self.imagenpeli)
+            //println(self.nombrepeli)
+            
+            
+//
+//            let imagen: String = (jsonResult["image"] as? String)!
+//            self.imagenpeli = imagen
+//
+//            var i = 0
+//            while(i < self.arrayname.count){
+//                if(self.arrayname[i].isEmpty){
+//                   self.arrayname[i] = self.imagenpeli
+//                }else{
+//                    i++
+//                }
+//            }
+//           
+//            
+//            println(self.arrayname)
+//            let nombre: String = (jsonResult["name"] as? String)!
+//            self.nombrepeli = nombre
+            
+            
+           
         })
 
+        
     }
     
     
@@ -108,6 +148,10 @@ class FavoritosTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return NSUserDefaults.standardUserDefaults().objectForKey("user_username") as? String
+    }
+    
     // MARK: - Table view data source
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -119,7 +163,7 @@ class FavoritosTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return self.textuser.count
+        return self.nombrePelis.count
         
     }
     func segueloginfavorito(){
@@ -132,22 +176,25 @@ class FavoritosTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
         
-        if(indexPath.row == 0){
-            cell.textLabel?.text = "Nombre de Usuario"
-            cell.detailTextLabel?.text = self.textuser.objectAtIndex(indexPath.row) as? String
-        }else if (indexPath.row == 1){
-            cell.textLabel?.text = self.textuser.objectAtIndex(indexPath.row) as? String
-        }else if(indexPath.row == 2){
-            cell.textLabel?.text = self.textuser.objectAtIndex(indexPath.row) as? String
-            cell.detailTextLabel?.text = ""
-        }else if(indexPath.row == 3){
-            cell.textLabel?.text = self.textuser.objectAtIndex(indexPath.row) as? String
-            cell.detailTextLabel?.text = ""
-        }
+        cell.textLabel?.text = nombrePelis.objectAtIndex(indexPath.row) as? String
+        
+        cell.imageView!.contentMode = UIViewContentMode.ScaleAspectFit
+        
+        cell.imageView!.image = self.requestImageWithStringURL(self.imagenesPelis.objectAtIndex(indexPath.row) as! String)
+        
+        
         
         return cell
     }
     
+    func  requestImageWithStringURL(url2: String)  -> UIImage?{
+        if let url = NSURL(string: url2) {
+            if let data = NSData(contentsOfURL: url){
+                return UIImage(data: data)!
+            }
+        }
+        return nil
+    }
     
     /*
     // Override to support conditional editing of the table view.

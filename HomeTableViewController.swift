@@ -8,21 +8,31 @@
 
 import UIKit
 
-class HomeTableViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UISearchDisplayDelegate{
+class HomeTableViewController: UITableViewController,UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UISearchDisplayDelegate{
     
     //configuracion searchbar
     @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet var tableview: UITableView!
+    var is_searching:Bool!   // It's flag for searching
+    var dataArray:NSMutableArray!  // Its data array for UITableview
+    var searchingDataArray:NSMutableArray! // Its data searching array that that need for search result show
     
-    
+   
    
     var dict:NSArray = NSArray()
     var movieImage:UIImage!
-
+    var namepeliculas = [""]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //delegates Searchbar
+        // Do any additional setup after loading the view, typically from a nib.
+        is_searching = false
+        dataArray = ["Corazon de león ", "Insurgente", "Home", "Buscando a Hagen", "Mommy"]
+        searchingDataArray = []
+        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        
        
               
         var url : String = "https://murmuring-oasis-5413.herokuapp.com/movies.json"
@@ -40,7 +50,13 @@ class HomeTableViewController: UITableViewController, UITableViewDataSource, UIT
                 dispatch_async(dispatch_get_main_queue(), {
                     self.dict = jsonResult
                     
-                    //println(jsonResult)
+                    println(self.dict[0]["name"] as! String)
+                    
+                    for (var i = 0; i < self.dict.count; i++){
+                        //self.namepeliculas[i] = self.dict[i]["name"] as! String
+                        println(self.dict[i]["name"] as! String)
+                        
+                    }
                     
                     self.tableView.reloadData()
                 })
@@ -57,8 +73,34 @@ class HomeTableViewController: UITableViewController, UITableViewDataSource, UIT
         
     }
     //configuracion searchBar
-   
-  
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        if is_searching == true{
+            return searchingDataArray.count
+        }else{
+            return dict.count  //Currently Giving default Value
+        }
+    }
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String){
+        if searchBar.text.isEmpty{
+            is_searching = false
+            tableView.reloadData()
+        } else {
+            println(" search text %@ ",searchBar.text as NSString)
+            is_searching = true
+            searchingDataArray.removeAllObjects()
+            for var index = 0; index < dataArray.count; index++
+            {
+                var currentString = dataArray.objectAtIndex(index) as! String
+                if currentString.lowercaseString.rangeOfString(searchText.lowercaseString)  != nil {
+                    searchingDataArray.addObject(currentString)
+                    
+                }
+            }
+            tableView.reloadData()
+        }
+    }
+
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -72,47 +114,51 @@ class HomeTableViewController: UITableViewController, UITableViewDataSource, UIT
         // Return the number of sections.
         return 1
     }
-    
+   /*
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete method implementation.
         // Return the number of rows in the section.
         return dict.count
     }
-    
+    */
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! UITableViewCell
         
         var url1: String = "https://murmuring-oasis-5413.herokuapp.com/movies.json"
         var request : NSMutableURLRequest = NSMutableURLRequest()
         request.URL = NSURL(string: url1)
+        
         //creacion busqueda
-        
-        
-        
-   
-        //creacion del boton favorito
-        
-        let button:UIButton = UIButton.buttonWithType(UIButtonType.System) as! UIButton
-        button.frame = CGRectMake(0, 0, 24, 24)
-        button.setImage(UIImage(named: "Star-24"), forState: UIControlState.Normal);
-        button.setImage(UIImage(named: "Estrellarellena"), forState: UIControlState.Highlighted)
-        button.tag = indexPath.row
-        
-        //agregar la accion
-        
-        button.addTarget(self, action: "favoritos:", forControlEvents: UIControlEvents.TouchUpInside)
-        cell.accessoryView = button;
-        
-        //imagen de las peliculas
-        
-        var DireccionImagen = dict[indexPath.row]["image"] as! String
-        cell.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
-        cell.imageView?.image = requestImageWithStringURL(DireccionImagen)
-        
-        // Configure the cell...
-        
-        cell.textLabel?.text = dict[indexPath.row]["name"] as? String
-        
+        if is_searching == true{
+            cell.textLabel!.text = searchingDataArray[indexPath.row] as! NSString as String
+            
+        }else{
+            cell.textLabel!.text = dataArray[indexPath.row] as! NSString as String
+            
+            //creacion del boton favorito
+            
+            let button:UIButton = UIButton.buttonWithType(UIButtonType.System) as! UIButton
+            button.frame = CGRectMake(0, 0, 24, 24)
+            button.setImage(UIImage(named: "Star-24"), forState: UIControlState.Normal);
+            button.setImage(UIImage(named: "Estrellarellena"), forState: UIControlState.Highlighted)
+            button.tag = indexPath.row
+            
+            //agregar la accion
+            
+            button.addTarget(self, action: "favoritos:", forControlEvents: UIControlEvents.TouchUpInside)
+            cell.accessoryView = button;
+            
+            //imagen de las peliculas
+            
+            var DireccionImagen = dict[indexPath.row]["image"] as! String
+            cell.imageView?.contentMode = UIViewContentMode.ScaleAspectFit
+            cell.imageView?.image = requestImageWithStringURL(DireccionImagen)
+            
+            // Configure the cell...
+            
+            cell.textLabel?.text = dict[indexPath.row]["name"] as? String
+        }
+    
         return cell
     }
     func  requestImageWithStringURL(url2: String)  -> UIImage?{
