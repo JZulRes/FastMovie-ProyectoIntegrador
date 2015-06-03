@@ -8,15 +8,23 @@
 
 import UIKit
 
-class HomeTableViewController: UITableViewController {
+class HomeTableViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate, UISearchDisplayDelegate{
+    
+    //configuracion searchbar
+    @IBOutlet weak var searchBar: UISearchBar!
     
     
-
+   
     var dict:NSArray = NSArray()
     var movieImage:UIImage!
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //delegates Searchbar
+       
+              
         var url : String = "https://murmuring-oasis-5413.herokuapp.com/movies.json"
         var request : NSMutableURLRequest = NSMutableURLRequest()
         request.URL = NSURL(string: url)
@@ -26,10 +34,12 @@ class HomeTableViewController: UITableViewController {
             var error: AutoreleasingUnsafeMutablePointer<NSError?> = nil
             
             let jsonResult: NSArray! = NSJSONSerialization.JSONObjectWithData(data, options:NSJSONReadingOptions.MutableContainers, error: error) as? NSArray
+            
              
             if (jsonResult != nil) {
                 dispatch_async(dispatch_get_main_queue(), {
                     self.dict = jsonResult
+                    
                     //println(jsonResult)
                     
                     self.tableView.reloadData()
@@ -46,6 +56,9 @@ class HomeTableViewController: UITableViewController {
         super.viewDidLoad()
         
     }
+    //configuracion searchBar
+   
+  
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -72,7 +85,11 @@ class HomeTableViewController: UITableViewController {
         var url1: String = "https://murmuring-oasis-5413.herokuapp.com/movies.json"
         var request : NSMutableURLRequest = NSMutableURLRequest()
         request.URL = NSURL(string: url1)
+        //creacion busqueda
         
+        
+        
+   
         //creacion del boton favorito
         
         let button:UIButton = UIButton.buttonWithType(UIButtonType.System) as! UIButton

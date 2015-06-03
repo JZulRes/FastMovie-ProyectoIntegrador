@@ -33,6 +33,7 @@ class FavoritosTableViewController: UITableViewController {
         self.textuser.addObject("Peliculas Favoritas")
         //colocamos los objetos de las peliculas favortas
         BaseDeDatosFavoritos()
+        println("aqui est el nombre de la pelicila \(nombrepeli)")
         self.textuser.addObject(nombrepeli)
         self.tableView.reloadData()
     }
@@ -136,8 +137,12 @@ class FavoritosTableViewController: UITableViewController {
             cell.detailTextLabel?.text = self.textuser.objectAtIndex(indexPath.row) as? String
         }else if (indexPath.row == 1){
             cell.textLabel?.text = self.textuser.objectAtIndex(indexPath.row) as? String
-        }else if(indexPath.row > 1){
+        }else if(indexPath.row == 2){
             cell.textLabel?.text = self.textuser.objectAtIndex(indexPath.row) as? String
+            cell.detailTextLabel?.text = ""
+        }else if(indexPath.row == 3){
+            cell.textLabel?.text = self.textuser.objectAtIndex(indexPath.row) as? String
+            cell.detailTextLabel?.text = ""
         }
         
         return cell
