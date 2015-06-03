@@ -211,12 +211,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="Rmx-aE-y7h" detailTextLabel="YtH-Dc-NzH" rowHeight="87" style="IBUITableViewCellStyleSubtitle" id="Dtl-vZ-Dz2">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="fLG-09-LJV" detailTextLabel="rEC-fr-7Zt" rowHeight="87" style="IBUITableViewCellStyleSubtitle" id="Dtl-vZ-Dz2">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dtl-vZ-Dz2" id="IQw-Ih-tan">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Rmx-aE-y7h">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fLG-09-LJV">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -225,7 +225,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             </variation>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YtH-Dc-NzH">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rEC-fr-7Zt">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -503,46 +503,19 @@
                                 <color key="textColor" red="0.001257677643" green="0.072166727299999997" blue="0.90741398360000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Horario:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6o-WP-fxI">
-                                <rect key="frame" x="16" y="387" width="62" height="21"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
-                                <color key="textColor" red="0.001257677643" green="0.072166727299999997" blue="0.90741398360000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cargando...." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7LP-NR-CFG">
-                                <rect key="frame" x="86" y="387" width="160" height="21"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cargando...." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2OB-h4-SmA">
-                                <rect key="frame" x="16" y="351" width="160" height="21"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zOf-ix-RS9">
                                 <rect key="frame" x="235" y="270" width="133" height="212"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="229" y="270" width="139" height="213"/>
+                                </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calificación" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jnp-bG-Gja">
                                 <rect key="frame" x="93" y="421" width="73" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                 <color key="textColor" red="0.001257677643" green="0.072166727299999997" blue="0.90741398360000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Genero:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKy-QC-aAY">
-                                <rect key="frame" x="16" y="512" width="61" height="21"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
-                                <color key="textColor" red="0.001257677643" green="0.072166727299999997" blue="0.90741398360000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cargando...." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2w-xq-ybn">
-                                <rect key="frame" x="85" y="512" width="161" height="20.5"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="85" y="512" width="161" height="21"/>
+                                    <rect key="frame" x="79" y="328" width="73" height="21"/>
                                 </variation>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Cargando...." translatesAutoresizingMaskIntoConstraints="NO" id="UgS-rX-dOA">
@@ -553,34 +526,34 @@
                             </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="estrella.png" translatesAutoresizingMaskIntoConstraints="NO" id="oLf-ek-qmV">
                                 <rect key="frame" x="38" y="450" width="41" height="32"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="24" y="357" width="41" height="32"/>
+                                </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="estrella.png" translatesAutoresizingMaskIntoConstraints="NO" id="wVy-w9-dTi">
                                 <rect key="frame" x="74" y="450" width="41" height="32"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="60" y="357" width="41" height="32"/>
+                                </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="estrella.png" translatesAutoresizingMaskIntoConstraints="NO" id="xbZ-JL-EF1">
                                 <rect key="frame" x="144" y="450" width="41" height="32"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="130" y="357" width="41" height="32"/>
+                                </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="estrella.png" translatesAutoresizingMaskIntoConstraints="NO" id="Mmy-vW-1Vd">
                                 <rect key="frame" x="179" y="450" width="41" height="32"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="165" y="357" width="41" height="32"/>
+                                </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="estrella.png" translatesAutoresizingMaskIntoConstraints="NO" id="wT7-NB-MGq">
                                 <rect key="frame" x="109" y="450" width="41" height="32"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cines Disponibles:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AaA-mZ-DjF">
-                                <rect key="frame" x="16" y="329" width="143" height="21"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
-                                <color key="textColor" red="0.001257677643" green="0.072166727299999997" blue="0.90741398360000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Cargando...." translatesAutoresizingMaskIntoConstraints="NO" id="JmD-Jp-0sz">
-                                <rect key="frame" x="109" y="264" width="119" height="51.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="109" y="264" width="119" height="52"/>
+                                    <rect key="frame" x="95" y="357" width="41" height="32"/>
                                 </variation>
-                            </textView>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sinopsis" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Elx-WA-ebb">
                                 <rect key="frame" x="16" y="95" width="61" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -592,10 +565,40 @@
                                 <state key="normal" title="Button" image="botoncompra.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="149" y="514" width="77" height="64"/>
+                                </variation>
                                 <connections>
-                                    <segue destination="kDR-3n-2rK" kind="show" identifier="pasaespecificacion" id="whx-k2-VvU"/>
+                                    <segue destination="kDR-3n-2rK" kind="show" id="AtS-0a-0sk"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Genero:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wKy-QC-aAY">
+                                <rect key="frame" x="16" y="512" width="61" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                <color key="textColor" red="0.001257677643" green="0.072166727299999997" blue="0.90741398360000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="432" width="61" height="21"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cargando...." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2w-xq-ybn">
+                                <rect key="frame" x="85" y="512" width="161" height="20.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="79" y="432" width="149" height="21"/>
+                                </variation>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Cargando...." translatesAutoresizingMaskIntoConstraints="NO" id="JmD-Jp-0sz">
+                                <rect key="frame" x="109" y="264" width="119" height="51.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="102" y="268" width="124" height="52"/>
+                                </variation>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -604,7 +607,6 @@
                     <connections>
                         <outlet property="ImagenPelicula" destination="zOf-ix-RS9" id="zGi-Gy-OtQ"/>
                         <outlet property="botonnext" destination="rbM-x5-oyZ" id="akx-MD-dQr"/>
-                        <outlet property="cinesdisponibles" destination="2OB-h4-SmA" id="2q4-rb-cT4"/>
                         <outlet property="clasificaciontext" destination="JmD-Jp-0sz" id="ICz-me-uqI"/>
                         <outlet property="e1" destination="oLf-ek-qmV" id="ST4-vm-0kP"/>
                         <outlet property="e2" destination="wVy-w9-dTi" id="E4F-dq-hdP"/>
@@ -612,7 +614,6 @@
                         <outlet property="e4" destination="xbZ-JL-EF1" id="snI-gB-EIe"/>
                         <outlet property="e5" destination="Mmy-vW-1Vd" id="pUo-3r-htq"/>
                         <outlet property="generotext" destination="r2w-xq-ybn" id="UWE-0t-WN6"/>
-                        <outlet property="horariotext" destination="7LP-NR-CFG" id="JPj-o9-Ii2"/>
                         <outlet property="imagenPelicula" destination="zOf-ix-RS9" id="Ztl-Q3-Sx8"/>
                         <outlet property="sinopsistex" destination="UgS-rX-dOA" id="AJz-fS-kpz"/>
                     </connections>
@@ -633,58 +634,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="28D-Le-fjF">
-                                <rect key="frame" x="8" y="183" width="183" height="162"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="8" y="194" width="183" height="162"/>
-                                </variation>
-                            </pickerView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zta-S6-yzh">
-                                <rect key="frame" x="73" y="114" width="272" height="29"/>
-                                <segments>
-                                    <segment title="&quot;Nombre de Cine1&quot;"/>
-                                    <segment title="&quot;Nombre de Cine 2&quot;"/>
-                                </segments>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="51" y="112" width="272" height="29"/>
-                                </variation>
-                            </segmentedControl>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KIN-uq-icc">
-                                <rect key="frame" x="194" y="183" width="183" height="162"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="192" y="194" width="183" height="162"/>
-                                </variation>
-                            </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Seleciona Cinema" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Glv-f4-X1e">
-                                <rect key="frame" x="30" y="165" width="139" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Seleciona Horario" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w4K-DJ-40o">
-                                <rect key="frame" x="222" y="165" width="137" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Precio:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iBs-k4-V81">
-                                <rect key="frame" x="30" y="345" width="54" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="32" y="388" width="54" height="21"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Precio 3D:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s91-h3-7FN">
-                                <rect key="frame" x="222" y="344" width="80" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="224" y="387" width="80" height="21"/>
-                                </variation>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calificacion" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0M5-bh-SQZ">
                                 <rect key="frame" x="164" y="381" width="89" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -692,24 +641,6 @@
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="147" y="434" width="80" height="21"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="7.500 $" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rny-vC-fY9">
-                                <rect key="frame" x="77" y="345" width="45" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="79" y="388" width="45" height="21"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="11.000$" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C5Z-Sg-K4v">
-                                <rect key="frame" x="291" y="344" width="49" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="293" y="387" width="49" height="21"/>
                                 </variation>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="estrella.png" translatesAutoresizingMaskIntoConstraints="NO" id="S93-i9-Pwl">
@@ -754,7 +685,7 @@
                                     <segue destination="PLV-mS-SqZ" kind="show" identifier="pasopuesto" id="ZYv-D4-OiB"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;Nombre de pelicula&quot;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEJ-o8-UZZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;Name&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zEJ-o8-UZZ">
                                 <rect key="frame" x="126" y="73" width="164" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -763,11 +694,37 @@
                                     <rect key="frame" x="105" y="72" width="164" height="21"/>
                                 </variation>
                             </label>
+                            <pickerView contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="28D-Le-fjF">
+                                <rect key="frame" x="8" y="183" width="183" height="162"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="8" y="176" width="367" height="204"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="kDR-3n-2rK" id="1bR-No-JgB"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Seleciona Cinema" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Glv-f4-X1e">
+                                <rect key="frame" x="30" y="165" width="139" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="112" y="147" width="150" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Especificación" id="bdH-lZ-acv"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="e1" destination="S93-i9-Pwl" id="Jv6-dO-qfd"/>
+                        <outlet property="e2" destination="spt-hw-Cmz" id="GN5-F5-JsE"/>
+                        <outlet property="e3" destination="6Bg-NN-EWB" id="5sj-Hu-lx6"/>
+                        <outlet property="e4" destination="c30-K3-ftL" id="Dda-c2-oSB"/>
+                        <outlet property="e5" destination="bWN-nB-t5C" id="wgz-Nh-6BW"/>
+                        <outlet property="labelnametitle" destination="zEJ-o8-UZZ" id="ZUJ-CB-FWx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rng-xh-0sM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -785,13 +742,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escoja su Puesto" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqF-98-J3E">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escoja su Puesto" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqF-98-J3E">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="121" y="87" width="133" height="21"/>
+                                    <rect key="frame" x="121" y="86" width="133" height="21"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Yx-I6-nGi">
@@ -800,8 +757,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="117" y="139" width="26" height="26"/>
+                                    <rect key="frame" x="117" y="123" width="26" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla3:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="GI2-4b-CJn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sYx-V1-Yg7">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -809,8 +769,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="220" y="173" width="27" height="26"/>
+                                    <rect key="frame" x="220" y="157" width="27" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla14:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="HV3-Wn-wd8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k5e-za-yOQ">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -818,8 +781,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="151" y="173" width="27" height="26"/>
+                                    <rect key="frame" x="151" y="157" width="27" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla12:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="zvN-A1-Apz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Hh-rx-PSZ">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -827,8 +793,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="186" y="173" width="26" height="26"/>
+                                    <rect key="frame" x="186" y="157" width="26" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla13:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="SdI-JE-Dm0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ev-Jy-X7C">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -836,8 +805,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="117" y="173" width="26" height="26"/>
+                                    <rect key="frame" x="117" y="157" width="26" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla11:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="Ngs-X8-j7n"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rIl-yR-xQc">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -845,8 +817,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="151" y="139" width="27" height="26"/>
+                                    <rect key="frame" x="151" y="123" width="27" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla4:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="de7-7I-mvE"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Abs-Zv-5sj">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -854,8 +829,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="186" y="139" width="26" height="26"/>
+                                    <rect key="frame" x="186" y="123" width="26" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla5:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="9P3-4f-gQ7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qOl-wu-8lV">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -863,8 +841,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="220" y="139" width="27" height="26"/>
+                                    <rect key="frame" x="220" y="123" width="27" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla6:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="Ves-qn-n7l"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NPm-rv-Ngq">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -872,8 +853,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="151" y="207" width="27" height="26"/>
+                                    <rect key="frame" x="151" y="191" width="27" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla20:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="oWN-p6-czX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Byc-EL-ove">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -881,8 +865,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="186" y="207" width="26" height="26"/>
+                                    <rect key="frame" x="186" y="191" width="26" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla21:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="Y3f-Ku-mhr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lF1-1i-C6d">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -890,8 +877,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="117" y="207" width="26" height="26"/>
+                                    <rect key="frame" x="117" y="191" width="26" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla19:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="uFz-84-x8J"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AU2-Rn-LUK">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -899,8 +889,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="220" y="207" width="27" height="26"/>
+                                    <rect key="frame" x="220" y="191" width="27" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla22:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="iWd-SS-gWi"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W98-IT-K2v">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -908,8 +901,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="220" y="241" width="27" height="26"/>
+                                    <rect key="frame" x="220" y="225" width="27" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla30:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="1KV-70-mF7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0NP-Ki-VAl">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -917,8 +913,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="151" y="241" width="27" height="26"/>
+                                    <rect key="frame" x="151" y="225" width="27" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla28:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="WuS-ik-aYl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZrT-Yv-v0w">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -926,8 +925,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="186" y="241" width="26" height="26"/>
+                                    <rect key="frame" x="186" y="225" width="26" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla29:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="aBF-gd-ayt"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xGs-0g-zQh">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -935,8 +937,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="117" y="241" width="26" height="26"/>
+                                    <rect key="frame" x="117" y="225" width="26" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla27:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="6QS-Mt-kGe"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08g-9d-3KM">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -944,8 +949,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="151" y="309" width="27" height="26"/>
+                                    <rect key="frame" x="151" y="293" width="27" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla44:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="rcn-Qm-IaD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="obJ-fC-j8k">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -953,8 +961,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="186" y="309" width="26" height="26"/>
+                                    <rect key="frame" x="186" y="293" width="26" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla45:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="Qye-Vn-o3E"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJS-Vd-Cn7">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -962,8 +973,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="117" y="309" width="26" height="26"/>
+                                    <rect key="frame" x="117" y="293" width="26" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla43:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="K9B-VR-cMS"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zjb-o7-1B5">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -971,8 +985,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="220" y="275" width="27" height="26"/>
+                                    <rect key="frame" x="220" y="259" width="27" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla38:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="l0l-C1-uEn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOg-NU-mz7">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -980,8 +997,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="151" y="275" width="27" height="26"/>
+                                    <rect key="frame" x="151" y="259" width="27" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla36:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="zff-zg-s7B"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Czx-Lc-mNK">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -989,8 +1009,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="186" y="275" width="26" height="26"/>
+                                    <rect key="frame" x="186" y="259" width="26" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla37:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="BzK-d3-JgL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDY-AC-6b6">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -998,8 +1021,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="117" y="275" width="26" height="26"/>
+                                    <rect key="frame" x="117" y="259" width="26" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla35:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="OBc-wA-qn4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ptl-Nr-vgT">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1007,8 +1033,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="220" y="309" width="27" height="26"/>
+                                    <rect key="frame" x="220" y="293" width="27" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla46:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="3hr-F2-T7x"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZLj-Ap-SgO">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1016,8 +1045,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="294" y="173" width="26" height="26"/>
+                                    <rect key="frame" x="294" y="157" width="26" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla15:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="O3F-Ph-xri"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jln-oX-TEj">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1025,8 +1057,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="294" y="139" width="26" height="26"/>
+                                    <rect key="frame" x="294" y="123" width="26" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla7:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="WMF-ga-v04"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvl-tt-iJA">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1034,8 +1069,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="294" y="207" width="26" height="26"/>
+                                    <rect key="frame" x="294" y="191" width="26" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla23:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="VQo-Ik-bCO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMM-Gl-i1C">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1043,8 +1081,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="294" y="241" width="26" height="26"/>
+                                    <rect key="frame" x="294" y="225" width="26" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla31:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="uUU-cf-ROv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLa-8t-ehc">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1052,8 +1093,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="294" y="275" width="26" height="26"/>
+                                    <rect key="frame" x="294" y="259" width="26" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla39:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="wf9-gK-E9z"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1T-bK-ebC">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1061,8 +1105,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="294" y="309" width="26" height="26"/>
+                                    <rect key="frame" x="294" y="293" width="26" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla47:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="UwI-yQ-3cp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nlq-dM-ms9">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1070,8 +1117,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="327" y="173" width="26" height="26"/>
+                                    <rect key="frame" x="327" y="157" width="26" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla16:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="YMa-y8-hij"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qgZ-Qu-y5v">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1079,8 +1129,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="327" y="139" width="26" height="26"/>
+                                    <rect key="frame" x="327" y="123" width="26" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla8:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="sr7-m0-kXW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqN-5m-xgR">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1088,8 +1141,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="327" y="207" width="26" height="26"/>
+                                    <rect key="frame" x="327" y="191" width="26" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla24:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="plM-wf-AXh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4dQ-dY-7Ct">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1097,8 +1153,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="327" y="241" width="26" height="26"/>
+                                    <rect key="frame" x="327" y="225" width="26" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla32:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="X2b-HD-Jeu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F0f-8y-AMs">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1106,8 +1165,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="327" y="275" width="26" height="26"/>
+                                    <rect key="frame" x="327" y="259" width="26" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla40:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="ZRc-96-h5Z"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MbW-hQ-Bxs">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1115,8 +1177,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="327" y="309" width="26" height="26"/>
+                                    <rect key="frame" x="327" y="293" width="26" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla48:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="g0w-vC-3bR"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AQJ-It-p4e">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1124,8 +1189,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="48" y="173" width="26" height="26"/>
+                                    <rect key="frame" x="48" y="157" width="26" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla10:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="pPa-Nh-Ghl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2mD-Qr-cOp">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1133,8 +1201,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="48" y="139" width="26" height="26"/>
+                                    <rect key="frame" x="48" y="123" width="26" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla2:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="QeA-Mq-WR6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zRr-Nm-gvu">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1142,8 +1213,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="48" y="207" width="26" height="26"/>
+                                    <rect key="frame" x="48" y="191" width="26" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla18:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="Vp3-lA-U1g"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQr-Os-Hht">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1151,8 +1225,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="48" y="241" width="26" height="26"/>
+                                    <rect key="frame" x="48" y="225" width="26" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla26:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="D13-gG-a4P"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEd-Vk-4TP">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1160,8 +1237,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="48" y="275" width="26" height="26"/>
+                                    <rect key="frame" x="48" y="259" width="26" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla34:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="Gpg-Ga-Piw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8M-zu-vsp">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1169,8 +1249,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="48" y="309" width="26" height="26"/>
+                                    <rect key="frame" x="48" y="293" width="26" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla42:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="eig-ec-PJQ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Unp-6S-SeD">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1178,8 +1261,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="22" y="173" width="26" height="26"/>
+                                    <rect key="frame" x="22" y="157" width="26" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla9:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="Jol-Ym-uAn"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wx6-gl-da4">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1187,8 +1273,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="22" y="139" width="26" height="26"/>
+                                    <rect key="frame" x="22" y="123" width="26" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla1:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="0QS-ql-4Kg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OWl-06-IFq">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1196,8 +1285,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="22" y="207" width="26" height="26"/>
+                                    <rect key="frame" x="22" y="191" width="26" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla17:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="JzH-vQ-xfh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mOl-hG-1WQ">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1205,8 +1297,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="22" y="241" width="26" height="26"/>
+                                    <rect key="frame" x="22" y="225" width="26" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla25:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="BlF-1Q-O5f"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GdU-5S-DsC">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1214,8 +1309,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="22" y="275" width="26" height="26"/>
+                                    <rect key="frame" x="22" y="259" width="26" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla33:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="gil-72-k7x"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fou-V5-aoZ">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
@@ -1223,9 +1321,30 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="22" y="309" width="26" height="26"/>
+                                    <rect key="frame" x="22" y="293" width="26" height="26"/>
                                 </variation>
+                                <connections>
+                                    <action selector="silla41:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="YYY-fL-lum"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seleccion Horario" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w81-RX-Lpm">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="118" y="344" width="138" height="21"/>
+                                </variation>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vI7-LX-EGV">
+                                <rect key="frame" x="0.0" y="-162" width="320" height="162"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="384" width="375" height="162"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="PLV-mS-SqZ" id="wMx-te-pCu"/>
+                                </connections>
+                            </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abU-Jq-onr">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <state key="normal" image="botoncompra.png">
@@ -1235,18 +1354,9 @@
                                     <rect key="frame" x="156" y="554" width="62" height="56"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="WJA-7v-2Aw" kind="show" id="st0-Nx-HLr"/>
+                                    <action selector="pasar:" destination="PLV-mS-SqZ" eventType="touchUpInside" id="Ftg-Xp-IXU"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sala:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w81-RX-Lpm">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="22" y="390" width="39" height="21"/>
-                                </variation>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -1300,8 +1410,9 @@
                                 <exclude reference="mOl-hG-1WQ"/>
                                 <exclude reference="GdU-5S-DsC"/>
                                 <exclude reference="Fou-V5-aoZ"/>
-                                <exclude reference="abU-Jq-onr"/>
                                 <exclude reference="w81-RX-Lpm"/>
+                                <exclude reference="vI7-LX-EGV"/>
+                                <exclude reference="abU-Jq-onr"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -1355,13 +1466,17 @@
                                 <include reference="mOl-hG-1WQ"/>
                                 <include reference="GdU-5S-DsC"/>
                                 <include reference="Fou-V5-aoZ"/>
-                                <include reference="abU-Jq-onr"/>
                                 <include reference="w81-RX-Lpm"/>
+                                <include reference="vI7-LX-EGV"/>
+                                <include reference="abU-Jq-onr"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Compra" id="cT0-Jf-hLe"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <segue destination="WJA-7v-2Aw" kind="show" identifier="pasotarjeta" id="pTr-Ov-Qub"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xs3-ns-V9b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1397,14 +1512,14 @@
                                     <rect key="frame" x="16" y="88" width="141" height="21"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwa-7k-m3a">
+                            <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dwa-7k-m3a">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Button" image="VisaLogo.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="68" y="146" width="50" height="21"/>
+                                    <rect key="frame" x="16" y="131" width="50" height="21"/>
                                 </variation>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ygN-M1-uBB">
@@ -1413,7 +1528,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="126" y="139" width="67" height="37"/>
+                                    <rect key="frame" x="74" y="124" width="67" height="37"/>
                                 </variation>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Numero de Tarjeta:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uot-c6-0w8">
@@ -1422,7 +1537,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="211" width="146" height="21"/>
+                                    <rect key="frame" x="17" y="174" width="146" height="21"/>
                                 </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Numeo de Tarjeta" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0g5-6W-Un1">
@@ -1430,27 +1545,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="249" width="222" height="30"/>
+                                    <rect key="frame" x="17" y="203" width="222" height="30"/>
                                 </variation>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBg-Tx-2Ni">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Comprar">
-                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="136" y="458" width="102" height="30"/>
-                                </variation>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valido Hasta" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="taX-T8-028">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="14" y="328" width="96" height="21"/>
+                                    <rect key="frame" x="17" y="395" width="96" height="21"/>
                                 </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MM" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Buz-Jh-fAn">
@@ -1458,7 +1562,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="14" y="367" width="55" height="30"/>
+                                    <rect key="frame" x="17" y="424" width="55" height="30"/>
                                 </variation>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="YYYY" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CfG-YC-vvW">
@@ -1466,7 +1570,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="93" y="367" width="75" height="30"/>
+                                    <rect key="frame" x="96" y="424" width="75" height="30"/>
                                 </variation>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzj-gH-I8s">
@@ -1475,7 +1579,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="77" y="367" width="13" height="30"/>
+                                    <rect key="frame" x="80" y="424" width="13" height="30"/>
                                 </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Codigo de Seguridad" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6FC-tv-EE9">
@@ -1483,7 +1587,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="200" y="367" width="157" height="30"/>
+                                    <rect key="frame" x="203" y="424" width="157" height="30"/>
                                 </variation>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Codigo de seguridad" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h15-k6-da9">
@@ -1492,7 +1596,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="198" y="328" width="161" height="21"/>
+                                    <rect key="frame" x="201" y="395" width="161" height="21"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XgD-Qx-hWY">
@@ -1503,12 +1607,60 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="136" y="523" width="102" height="30"/>
+                                    <rect key="frame" x="136" y="567" width="102" height="30"/>
                                 </variation>
                                 <connections>
                                     <segue destination="4ZL-zv-zX4" kind="popoverPresentation" popoverAnchorView="XgD-Qx-hWY" id="gqR-Y4-lOh">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                     </segue>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre del Propietario:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="khO-W3-akA">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="17" y="250" width="192" height="21"/>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre del Propietario" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i6p-2k-W80">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="17" y="279" width="222" height="30"/>
+                                </variation>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cuotas" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lhA-Br-lgG">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="347" width="97" height="30"/>
+                                </variation>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cuotas:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMO-Fq-7JS">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="318" width="60" height="21"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBg-Tx-2Ni">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Comprar">
+                                    <color key="titleColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="136" y="498" width="102" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="compra:" destination="WJA-7v-2Aw" eventType="touchUpInside" id="s6W-if-6Cv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1521,7 +1673,6 @@
                                 <exclude reference="ygN-M1-uBB"/>
                                 <exclude reference="Uot-c6-0w8"/>
                                 <exclude reference="0g5-6W-Un1"/>
-                                <exclude reference="dBg-Tx-2Ni"/>
                                 <exclude reference="taX-T8-028"/>
                                 <exclude reference="Buz-Jh-fAn"/>
                                 <exclude reference="CfG-YC-vvW"/>
@@ -1529,6 +1680,11 @@
                                 <exclude reference="6FC-tv-EE9"/>
                                 <exclude reference="h15-k6-da9"/>
                                 <exclude reference="XgD-Qx-hWY"/>
+                                <exclude reference="khO-W3-akA"/>
+                                <exclude reference="i6p-2k-W80"/>
+                                <exclude reference="lhA-Br-lgG"/>
+                                <exclude reference="ZMO-Fq-7JS"/>
+                                <exclude reference="dBg-Tx-2Ni"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -1539,7 +1695,6 @@
                                 <include reference="ygN-M1-uBB"/>
                                 <include reference="Uot-c6-0w8"/>
                                 <include reference="0g5-6W-Un1"/>
-                                <include reference="dBg-Tx-2Ni"/>
                                 <include reference="taX-T8-028"/>
                                 <include reference="Buz-Jh-fAn"/>
                                 <include reference="CfG-YC-vvW"/>
@@ -1547,6 +1702,11 @@
                                 <include reference="6FC-tv-EE9"/>
                                 <include reference="h15-k6-da9"/>
                                 <include reference="XgD-Qx-hWY"/>
+                                <include reference="khO-W3-akA"/>
+                                <include reference="i6p-2k-W80"/>
+                                <include reference="lhA-Br-lgG"/>
+                                <include reference="ZMO-Fq-7JS"/>
+                                <include reference="dBg-Tx-2Ni"/>
                             </mask>
                         </variation>
                     </view>
@@ -1554,13 +1714,18 @@
                     <navigationItem key="navigationItem" title="Pago" id="j1S-Dx-TLn"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="codigo" destination="6FC-tv-EE9" id="f8Z-B3-qos"/>
+                        <outlet property="cuotas" destination="lhA-Br-lgG" id="6MU-Tc-KtM"/>
                         <outlet property="numerodetarjeta" destination="0g5-6W-Un1" id="ngr-QZ-m46"/>
+                        <outlet property="propietario" destination="i6p-2k-W80" id="xD0-7f-w51"/>
+                        <outlet property="validoaño" destination="CfG-YC-vvW" id="vGt-gi-re8"/>
+                        <outlet property="validomes" destination="Buz-Jh-fAn" id="fat-Gp-W2D"/>
                         <segue destination="ChP-zh-s2H" kind="presentation" identifier="login" id="g5b-o9-8Ju"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rha-j3-Qnr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4698.75" y="752.5"/>
+            <point key="canvasLocation" x="4698.75" y="769.5"/>
         </scene>
         <!--Usuario-->
         <scene sceneID="Q1m-cK-ZtP">
@@ -1772,10 +1937,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="tGX-Mk-VzD">
-                            <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Buscar Pelicula" id="ejR-Ig-MWJ">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
+                            <scopeButtonTitles>
+                                <string>Title</string>
+                            </scopeButtonTitles>
+                            <connections>
+                                <outlet property="delegate" destination="MA0-55-is3" id="gNU-zY-Mjp"/>
+                            </connections>
                         </searchBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="TGF-bq-9p2" imageView="psS-oj-GFP" rowHeight="106" style="IBUITableViewCellStyleDefault" id="S04-KQ-2d0">
@@ -1808,10 +1979,21 @@
                     <navigationItem key="navigationItem" title="Home" id="9rW-tE-EWp"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="searchBar" destination="ejR-Ig-MWJ" id="EES-iO-9Dj"/>
+                        <outlet property="searchDisplayController" destination="7nz-Ou-5DN" id="f2f-Gc-oqn"/>
                         <segue destination="8Ov-gP-MMP" kind="show" identifier="details_segue2" id="SeX-gr-ZrH"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qhN-nx-l4U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="7nz-Ou-5DN">
+                    <connections>
+                        <outlet property="delegate" destination="MA0-55-is3" id="eBo-bb-9d6"/>
+                        <outlet property="searchBar" destination="ejR-Ig-MWJ" id="GrQ-MJ-rbB"/>
+                        <outlet property="searchContentsController" destination="MA0-55-is3" id="MIp-a7-DNd"/>
+                        <outlet property="searchResultsDataSource" destination="MA0-55-is3" id="1Ja-PZ-yeM"/>
+                        <outlet property="searchResultsDelegate" destination="MA0-55-is3" id="NJ1-IL-nyb"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1632.75" y="-215.5"/>
         </scene>
@@ -1829,8 +2011,8 @@
         <image name="silla.png" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ja6-Nd-61t"/>
+        <segue reference="gqR-Y4-lOh"/>
+        <segue reference="g5b-o9-8Ju"/>
         <segue reference="ZRU-Lq-fNy"/>
-        <segue reference="ru8-Bf-Utc"/>
     </inferredMetricsTieBreakers>
 </document>
