@@ -187,6 +187,10 @@ class FavoritosTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 100
+    }
+    
     func  requestImageWithStringURL(url2: String)  -> UIImage?{
         if let url = NSURL(string: url2) {
             if let data = NSData(contentsOfURL: url){
