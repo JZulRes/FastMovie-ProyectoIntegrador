@@ -132,6 +132,8 @@ class HomeTableViewController: UITableViewController,UITableViewDelegate, UITabl
         if is_searching == true{
             cell.textLabel!.text = searchingDataArray[indexPath.row] as! NSString as String
             
+
+            return cell
         }else{
             cell.textLabel!.text = dataArray[indexPath.row] as! NSString as String
             

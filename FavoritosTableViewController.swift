@@ -37,7 +37,11 @@ class FavoritosTableViewController: UITableViewController {
         
         
         self.textuser.removeAllObjects()
+        
+        if(NSUserDefaults.standardUserDefaults().objectForKey("user_name") != nil){
         self.textuser.addObject(NSUserDefaults.standardUserDefaults().objectForKey("user_username")!)
+        }
+        
         self.textuser.addObject("Peliculas Favoritas")
         //colocamos los objetos de las peliculas favortas
         BaseDeDatosFavoritos()
