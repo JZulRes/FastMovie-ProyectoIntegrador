@@ -47,6 +47,7 @@ class tarjetaViewController: UIViewController, UITextFieldDelegate, UIAlertViewD
         validoaño.resignFirstResponder()
         codigo.resignFirstResponder()
         propietario.resignFirstResponder()
+        cuotas.resignFirstResponder()
     }
     
     @IBAction func compra(sender: AnyObject) {

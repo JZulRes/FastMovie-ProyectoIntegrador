@@ -17,7 +17,6 @@ class DetallesViewController: UIViewController {
     @IBOutlet weak var imagenPelicula: UIImageView!
     @IBOutlet weak var sinopsistex: UITextView!
     @IBOutlet weak var generotext: UILabel!
-    @IBOutlet weak var horariotext: UILabel!
     @IBOutlet weak var clasificaciontext: UITextView!
     @IBOutlet weak var e1: UIImageView!
     @IBOutlet weak var e2: UIImageView!
