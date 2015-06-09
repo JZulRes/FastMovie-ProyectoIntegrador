@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginFavoritosViewController: UIViewController {
+class LoginFavoritosViewController: UIViewController, UITextFieldDelegate{
 
     @IBOutlet weak var emailtextbox: UITextField!
     @IBOutlet weak var contraseñatextbox: UITextField!
@@ -20,6 +20,11 @@ class LoginFavoritosViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        
+    }
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        emailtextbox.resignFirstResponder()
+        contraseñatextbox.resignFirstResponder()
         
     }
    
@@ -150,6 +155,7 @@ class LoginFavoritosViewController: UIViewController {
         var data = NSData(contentsOfURL: NSURL(string: url)!)
         return (NSJSONSerialization.JSONObjectWithData(data!, options: nil, error: nil) as! NSArray)
     }
+    
 
 
     /*
