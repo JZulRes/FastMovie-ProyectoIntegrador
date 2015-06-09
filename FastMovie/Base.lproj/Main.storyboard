@@ -1551,7 +1551,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MM" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Buz-Jh-fAn">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="17" y="424" width="55" height="30"/>
                                 </variation>
@@ -1559,7 +1559,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="YYYY" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CfG-YC-vvW">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="96" y="424" width="75" height="30"/>
                                 </variation>
@@ -1576,7 +1576,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Codigo de Seguridad" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6FC-tv-EE9">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="203" y="424" width="157" height="30"/>
                                 </variation>
@@ -1626,7 +1626,7 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Cuotas" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lhA-Br-lgG">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="16" y="347" width="97" height="30"/>
                                 </variation>
